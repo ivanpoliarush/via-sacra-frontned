@@ -1,6 +1,7 @@
 import { InfoSection } from '../info-section/info-section';
 import { MainSection } from '../main-section/main-section';
 import { ServicesSection } from '../services-section/services-section';
+import { WorkProgressSection } from '../work-progress-section/work-progress-section';
 
 export const HomePage = () => {
 	return (
@@ -8,6 +9,7 @@ export const HomePage = () => {
 			<MainSection />
 			<InfoSection />
 			<ServicesSection />
+			<WorkProgressSection />
 		</main>
 	);
 };

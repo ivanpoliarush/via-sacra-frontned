@@ -1,0 +1,43 @@
+.imageWrapper {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	height: 270px;
+	border-radius: 50%;
+	border: 1px dashed #241b0a;
+}
+
+.iconWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 230px;
+	height: 230px;
+	border-radius: 50%;
+	background: #241b0a;
+}
+
+.title {
+	color: #241b0a;
+	text-align: center;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+	letter-spacing: -0.408px;
+	margin-bottom: 4px;
+}
+
+.description {
+	width: 160px;
+	margin: 0 auto;
+	color: #241b0a;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: -0.408px;
+}
