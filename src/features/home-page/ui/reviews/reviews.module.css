@@ -1,0 +1,81 @@
+.wrapper {
+	gap: 28px;
+	display: flex;
+	padding: 0 84px;
+	align-items: flex-start;
+}
+
+.iconWrapper {
+	padding: 12px 24px;
+}
+
+.mainContent {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.text {
+	color: #241b0a;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: -0.408px;
+}
+
+.authors {
+	height: 88px;
+	gap: 22px;
+	max-height: 88px;
+	display: flex;
+	align-items: center;
+}
+
+.author {
+	position: relative;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	gap: 26px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.author.active {
+	padding: 16px 24px;
+	background: #241b0a;
+}
+
+.authorImage {
+	width: 56px;
+	height: 56px;
+	z-index: 2;
+	position: relative;
+	border-radius: 50%;
+}
+
+.authorInfo {
+	z-index: 2;
+	position: relative;
+}
+
+.authorName {
+	white-space: nowrap;
+	color: #fff;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 34px;
+}
+
+.authorAge {
+	white-space: nowrap;
+	color: #fff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	opacity: 0.3;
+}
