@@ -1,0 +1,42 @@
+.wrapper {
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100px;
+	background: #241b0a;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s background;
+}
+
+.wrapper.withArrow {
+	justify-content: space-between;
+	padding: 16px 24px;
+}
+
+.wrapper:hover {
+	border: 1px solid #241b0a;
+	background: #fff5e4;
+}
+
+.label {
+	color: #fff5e4;
+	font-size: 21px;
+	font-style: normal;
+	line-height: 120%;
+	transition: 0.3s all;
+}
+
+.wrapper:hover .label {
+	color: #241b0a;
+}
+
+.wrapper .arrow path {
+	transition: 0.3s all;
+}
+
+.wrapper:hover .arrow path {
+	stroke: #241b0a;
+}

@@ -1,5 +1,7 @@
+import { HomePage } from '@/features/home-page/ui/main/main';
+
 const Home = () => {
-	return <p>Test</p>;
+	return <HomePage />;
 };
 
 export default Home;
