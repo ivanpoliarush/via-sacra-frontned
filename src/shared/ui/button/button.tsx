@@ -23,13 +23,14 @@ export const Button = ({
 	className,
 	label,
 	showArrow,
+	color = 'dark',
 	...props
 }: ButtonProps) => {
 	return (
 		<motion.button
 			whileHover="hover"
 			whileTap="tap"
-			className={clsx(styles.wrapper, className, {
+			className={clsx(styles.wrapper, className, styles[color], {
 				[styles.withArrow]: showArrow,
 			})}
 			{...(props as any)}>

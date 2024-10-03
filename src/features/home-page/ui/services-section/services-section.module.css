@@ -1,0 +1,22 @@
+.wrapper {
+	gap: 64px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 104px;
+	flex-direction: column;
+}
+
+.title {
+	color: #241b0a;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+.services {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+}
