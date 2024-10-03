@@ -22,6 +22,7 @@ const variants = {
 export const Button = ({
 	className,
 	label,
+	loading,
 	showArrow,
 	color = 'dark',
 	...props
@@ -32,15 +33,22 @@ export const Button = ({
 			whileTap="tap"
 			className={clsx(styles.wrapper, className, styles[color], {
 				[styles.withArrow]: showArrow,
+				[styles.loading]: loading,
 			})}
 			{...(props as any)}>
-			<p className={styles.label}>{label}</p>
-			{showArrow && (
-				<motion.div
-					variants={variants.arrow}
-					transition={{ duration: 0.3 }}>
-					<Arrow className={styles.arrow} />
-				</motion.div>
+			{loading ? (
+				<div className={styles.loader} />
+			) : (
+				<>
+					<p className={styles.label}>{label}</p>
+					{showArrow && (
+						<motion.div
+							variants={variants.arrow}
+							transition={{ duration: 0.3 }}>
+							<Arrow className={styles.arrow} />
+						</motion.div>
+					)}
+				</>
 			)}
 		</motion.button>
 	);

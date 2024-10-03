@@ -6,6 +6,7 @@ export interface ButtonProps
 		HTMLButtonElement
 	> {
 	label: string;
+	loading?: boolean;
 	color?: 'dark' | 'light';
 	showArrow?: boolean;
 }
