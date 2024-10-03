@@ -2,6 +2,7 @@ import { Header } from '@/features/layout/ui/header/header';
 import { meaCulpa } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import clsx from 'clsx';
+import Link from 'next/link';
 import styles from './main-section.module.css';
 
 export const MainSection = () => {
@@ -25,16 +26,20 @@ export const MainSection = () => {
 				</p>
 			</div>
 			<div className={styles.buttons}>
-				<Button
-					className={styles.button}
-					label="Acenda uma vela"
-					showArrow
-				/>
-				<Button
-					className={styles.button}
-					label="Envie uma oração"
-					showArrow
-				/>
+				<Link className={styles.link} href="/candles">
+					<Button
+						className={styles.button}
+						label="Acenda uma vela"
+						showArrow
+					/>
+				</Link>
+				<Link className={styles.link} href="/candles">
+					<Button
+						className={styles.button}
+						label="Envie uma oração"
+						showArrow
+					/>
+				</Link>
 			</div>
 		</section>
 	);

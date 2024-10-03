@@ -12,10 +12,12 @@ export const ServicesSection = () => {
 			</p>
 			<div className={styles.services}>
 				<Service
+					href="/candles"
 					title="acenda uma vela"
 					image="/home-page/services-section/candles.png"
 				/>
 				<Service
+					href="/candles"
 					title="peça uma oração"
 					image="/home-page/services-section/pope.png"
 				/>

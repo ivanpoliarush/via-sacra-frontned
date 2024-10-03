@@ -4,6 +4,7 @@ export interface InfoItemProps {
 	description: string;
 	button: {
 		label: string;
+		href: string;
 	};
 	image: string;
 	imageData?: {

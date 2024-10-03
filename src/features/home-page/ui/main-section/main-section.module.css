@@ -63,7 +63,13 @@
 	backdrop-filter: blur(12px);
 }
 
-.button {
+.link {
+	text-decoration: none;
 	height: 64px !important;
 	width: calc(50% - 6px) !important;
+}
+
+.button {
+	width: 100%;
+	height: 100%;
 }

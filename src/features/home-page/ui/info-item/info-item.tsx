@@ -1,6 +1,7 @@
 import { meaCulpa } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import clsx from 'clsx';
+import Link from 'next/link';
 import styles from './info-item.module.css';
 import { InfoItemProps } from './info-item.props';
 
@@ -22,11 +23,13 @@ export const InfoItem = ({
 				<p className={styles.title}>{title}</p>
 				<p className={styles.subtitle}>{subtitle}</p>
 				<p className={styles.description}>{description}</p>
-				<Button
-					className={styles.button}
-					label={button.label}
-					showArrow
-				/>
+				<Link className={styles.link} href={button.href}>
+					<Button
+						className={styles.button}
+						label={button.label}
+						showArrow
+					/>
+				</Link>
 			</div>
 			<div className={styles.imageWrapper}>
 				<img className={styles.image} src={image} alt={title} />
