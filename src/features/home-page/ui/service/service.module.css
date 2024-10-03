@@ -2,6 +2,8 @@
 	width: 100%;
 	display: flex;
 	aspect-ratio: 1;
+	overflow: hidden;
+	position: relative;
 	border-radius: 48px;
 	flex-direction: column;
 	padding: 40px 62px 28px 62px;
@@ -9,7 +11,24 @@
 	box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.12);
 }
 
+.blur {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	width: 100%;
+	background: linear-gradient(
+		180deg,
+		rgba(36, 27, 10, 0.7) 0%,
+		rgba(36, 27, 10, 0) 100%
+	);
+}
+
 .title {
+	position: relative;
+	z-index: 1;
 	text-align: center;
 	color: #fff;
 	font-size: 36px;

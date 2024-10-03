@@ -8,6 +8,7 @@ export const Service = ({ image, title }: ServiceProps) => {
 		<div
 			className={styles.wrapper}
 			style={{ backgroundImage: `url('${image}')` }}>
+			<div className={styles.blur} />
 			<p className={styles.title}>
 				<span className={meaCulpa.className}>
 					{title[0].toUpperCase()}
