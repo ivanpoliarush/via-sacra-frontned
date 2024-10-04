@@ -5,6 +5,8 @@ export interface InputProps
 		InputHTMLAttributes<HTMLInputElement>,
 		HTMLInputElement
 	> {
+	label?: string;
 	error?: boolean;
+	wrapperClassName?: string;
 	manyRows?: boolean;
 }

@@ -11,7 +11,14 @@ const variants = {
 	},
 };
 
-export const Input = ({ className, manyRows, error, ...props }: InputProps) => {
+export const Input = ({
+	wrapperClassName,
+	className,
+	manyRows,
+	error,
+	label,
+	...props
+}: InputProps) => {
 	if (manyRows) {
 		return (
 			<motion.textarea
@@ -27,14 +34,18 @@ export const Input = ({ className, manyRows, error, ...props }: InputProps) => {
 	}
 
 	return (
-		<motion.input
+		<motion.div
+			className={clsx(styles.wrapper, wrapperClassName)}
 			variants={variants}
 			animate={error ? 'error' : undefined}
-			transition={{ duration: 0.75 }}
-			className={clsx(styles.input, className, {
-				[styles.error]: error,
-			})}
-			{...(props as any)}
-		/>
+			transition={{ duration: 0.75 }}>
+			{label && <p className={styles.label}>{label}</p>}
+			<input
+				className={clsx(styles.input, className, {
+					[styles.error]: error,
+				})}
+				{...(props as any)}
+			/>
+		</motion.div>
 	);
 };

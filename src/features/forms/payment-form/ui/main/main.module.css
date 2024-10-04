@@ -1,0 +1,170 @@
+.wrapper {
+	width: 740px;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+}
+
+.paymentInfo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.totalProductsWrapper {
+	display: flex;
+	padding: 8px 12px;
+	align-items: center;
+	gap: 10px;
+	border-radius: 100px;
+	background: #241b0a;
+}
+
+.totalProductsWrapper p {
+	color: #fff5e4;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+}
+
+.totalProductsBadge {
+	width: 24px;
+	height: 24px;
+	background-color: #fff5e4;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.totalProductsBadge p {
+	color: #241b0a;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+}
+
+.price {
+	color: #000;
+	font-size: 32px;
+	font-style: normal;
+	line-height: 120%;
+}
+
+.inputs {
+	display: grid;
+	row-gap: 16px;
+	column-gap: 20px;
+	grid-template-areas:
+		'cardNumberInput cardNumberInput cardNumberInput'
+		'dateAvailabilityInput cvvInput postalCodeInput';
+}
+
+.cardNumberInput {
+	grid-area: cardNumberInput;
+}
+
+.dateAvailabilityInput {
+	grid-area: dateAvailabilityInput;
+}
+
+.cvvInput {
+	grid-area: cvvInput;
+}
+
+.postalCodeInput {
+	grid-area: postalCodeInput;
+}
+
+.buttons {
+	display: grid;
+	gap: 12px;
+	grid-template-areas:
+		'paymentButton paymentButton'
+		'applePayButton googlePayButton';
+}
+
+.paymentButtonContent {
+	width: 100%;
+	display: flex;
+	padding: 0 16px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.paymentButton {
+	grid-area: paymentButton;
+}
+
+.paymentButtonLabel {
+	color: #fff;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	transition: 0.3s all;
+}
+
+.paymentButton:hover .paymentButtonLabel {
+	color: #241b0a;
+}
+
+.paymentButtonIcons {
+	display: flex;
+	align-items: center;
+}
+
+.applePayButton,
+.googlePayButton {
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	gap: 3px;
+	border-radius: 100px;
+	background: #000;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+.applePayButton:hover,
+.googlePayButton:hover {
+	background: #fff;
+}
+
+.applePayButton {
+	grid-area: applePayButton;
+}
+
+.googlePayButton {
+	grid-area: googlePayButton;
+}
+
+.serviceButtonLabel {
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0.05px;
+	transition: 0.3s all;
+}
+
+.applePayButton:hover .serviceButtonLabel,
+.googlePayButton:hover .serviceButtonLabel {
+	color: #000;
+}
+
+.servicePayIcon path[data-fill='true'] {
+	fill: #fff;
+	transition: 0.3s all;
+}
+
+.applePayButton:hover path[data-fill='true'],
+.googlePayButton:hover path[data-fill='true'] {
+	fill: #000;
+}
