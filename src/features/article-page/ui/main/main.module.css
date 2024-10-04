@@ -1,0 +1,17 @@
+.wrapper {
+	padding: 43px 0 104px 0;
+}
+
+.title {
+	color: #241b0a;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 64px;
+	text-align: center;
+}
+
+.content {
+	margin-bottom: 21px;
+}

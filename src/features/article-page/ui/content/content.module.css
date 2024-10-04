@@ -1,0 +1,25 @@
+.wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.flex {
+	gap: 16px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper p {
+	color: #241b0a;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+}
+
+.wrapper img {
+	border-radius: 48px;
+	box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.12);
+}
