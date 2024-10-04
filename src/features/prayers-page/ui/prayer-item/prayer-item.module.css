@@ -1,0 +1,67 @@
+.wrapper {
+	width: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+	display: inline;
+	box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.12);
+}
+
+.titleWrapper {
+	display: flex;
+	width: 100%;
+	padding: 8px 12px;
+	justify-content: space-between;
+	background: #241b0a;
+}
+
+.title {
+	color: #fff5e4;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: -0.408px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.actions {
+	gap: 8px;
+	display: flex;
+	align-items: center;
+}
+
+.orderButton {
+	border: 1px solid #fff5e4 !important;
+	width: 75px !important;
+	height: 25px !important;
+}
+
+.orderButton p {
+	font-size: 14px !important;
+	font-weight: 500 !important;
+}
+
+.toggleButton {
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 50%;
+}
+
+.textWrapper {
+	overflow: hidden;
+	background-color: #fff5e4;
+	box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.12);
+}
+
+.text {
+	color: #000;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: -0.408px;
+}
