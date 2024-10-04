@@ -3,6 +3,7 @@
 import { poppins } from '@/shared/fonts';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import styles from './language-switcher.module.css';
 
@@ -15,6 +16,8 @@ const Language = ({
 	language: string;
 	onChange: () => void;
 }) => {
+	const page = usePathname();
+
 	return (
 		<button
 			className={clsx(styles.button, poppins.className)}
@@ -28,7 +31,7 @@ const Language = ({
 			{isActive && (
 				<motion.div
 					transition={{ duration: 0.2 }}
-					layoutId="language-background"
+					layoutId={`language-background-${page}`}
 					className={styles.background}
 				/>
 			)}
