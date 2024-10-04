@@ -18,6 +18,7 @@
 	gap: 10px;
 	border-radius: 100px;
 	background: #241b0a;
+	cursor: pointer;
 }
 
 .totalProductsWrapper p {

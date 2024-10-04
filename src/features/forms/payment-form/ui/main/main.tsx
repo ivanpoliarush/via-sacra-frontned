@@ -1,20 +1,29 @@
+'use client';
+
 import {
 	ApplePay,
 	GooglePay,
 	MasterCard,
 	Visa,
 } from '@/assets/icons/payment-form';
+import { ProductsModal } from '@/features/modals/products-modal/ui/main/main';
 import { meaCulpa } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import { Input } from '@/shared/ui/input/input';
 import clsx from 'clsx';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './main.module.css';
 
 export const PaymentForm = () => {
+	const [showModal, setShowModal] = useState(false);
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.paymentInfo}>
-				<div className={styles.totalProductsWrapper}>
+				<div
+					className={styles.totalProductsWrapper}
+					onClick={() => setShowModal(true)}>
 					<p>Total order</p>
 					<div className={styles.totalProductsBadge}>
 						<p>5</p>
@@ -68,6 +77,14 @@ export const PaymentForm = () => {
 					<GooglePay className={styles.servicePayIcon} />
 				</button>
 			</div>
+			{typeof window !== 'undefined' &&
+				createPortal(
+					<ProductsModal
+						isOpen={showModal}
+						onClose={() => setShowModal(false)}
+					/>,
+					window.document.body,
+				)}
 		</div>
 	);
 };
