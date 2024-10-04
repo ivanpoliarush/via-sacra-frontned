@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './select.module.css';
 import { SelectProps } from './select.props';
 
@@ -37,14 +37,11 @@ const variants = {
 			y: 0,
 			opacity: 1,
 			transition: {
-				duration: 1,
-				type: 'spring',
-				stiffness: 300,
-				damping: 24,
+				duration: 0.5,
 			},
 		},
 		closed: {
-			y: 15,
+			y: 10,
 			opacity: 0,
 			transition: {
 				duration: 0.2,
@@ -55,6 +52,22 @@ const variants = {
 
 export const Select = ({ options, selectedValue, onChange }: SelectProps) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const selectRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		document.addEventListener('mousedown', handleClickOutside);
+		return () =>
+			document.removeEventListener('mousedown', handleClickOutside);
+	}, []);
+
+	const handleClickOutside = (event: MouseEvent) => {
+		if (
+			selectRef.current &&
+			!selectRef.current.contains(event.target as Node)
+		) {
+			setIsOpen(false);
+		}
+	};
 
 	const label =
 		options.find(option => option.value === selectedValue)?.label ||
@@ -67,6 +80,7 @@ export const Select = ({ options, selectedValue, onChange }: SelectProps) => {
 
 	return (
 		<motion.nav
+			ref={selectRef}
 			initial={false}
 			animate={isOpen ? 'open' : 'closed'}
 			className={styles.wrapper}>
