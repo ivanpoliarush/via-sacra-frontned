@@ -1,0 +1,39 @@
+.wrapper {
+	margin-bottom: 104px;
+}
+
+.title {
+	color: #241b0a;
+	text-align: center;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 8px;
+}
+
+.description {
+	color: #241b0a;
+	text-align: center;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	width: 85%;
+	margin: 0 auto 64px auto;
+}
+
+.formWrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.formImage {
+	width: 45%;
+	border-radius: 48px;
+	box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.12);
+}
+
+.form {
+	width: 45%;
+}
