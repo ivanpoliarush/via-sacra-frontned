@@ -1,22 +1,27 @@
 'use client';
 
 import { Cart } from '@/assets/icons/cart';
+import { ProductsModal } from '@/features/modals/products-modal/ui/main/main';
 import { meaCulpa } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import { Input } from '@/shared/ui/input/input';
 import { Select } from '@/shared/ui/select/select';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './main.module.css';
 import { OrderFormProps } from './main.props';
 
 export const OrderForm = ({ className, ...props }: OrderFormProps) => {
+	const [showModal, setShowModal] = useState(false);
 	const [selectedValue, setSelectedValue] = useState('Velas pela Saúde');
 
 	return (
 		<div className={clsx(styles.wrapper, className)} {...props}>
 			<div>
-				<button className={styles.cartButton}>
+				<button
+					className={styles.cartButton}
+					onClick={() => setShowModal(true)}>
 					<Cart />
 					<div className={styles.countBadge}>
 						<p>2</p>
@@ -53,6 +58,13 @@ export const OrderForm = ({ className, ...props }: OrderFormProps) => {
 				</div>
 				<Button className={styles.button} label="Ordem" />
 			</div>
+			{createPortal(
+				<ProductsModal
+					isOpen={showModal}
+					onClose={() => setShowModal(false)}
+				/>,
+				document.body,
+			)}
 		</div>
 	);
 };

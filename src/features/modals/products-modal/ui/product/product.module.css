@@ -1,0 +1,43 @@
+.item {
+	display: flex;
+	padding: 8px 16px;
+	width: 400px;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+	border-radius: 100px;
+	background: #241b0a;
+}
+
+.title {
+	color: #fff5e4;
+	text-align: center;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: -0.408px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 16px;
+}
+
+.price {
+	color: #fff5e4;
+	font-size: 24px;
+	font-style: normal;
+	line-height: 120%;
+}
+
+.additionalInfo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.deleteButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
