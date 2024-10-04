@@ -60,13 +60,14 @@ export const OrderForm = ({ className, type, ...props }: OrderFormProps) => {
 				</div>
 				<Button className={styles.button} label="Ordem" />
 			</div>
-			{createPortal(
-				<ProductsModal
-					isOpen={showModal}
-					onClose={() => setShowModal(false)}
-				/>,
-				document.body,
-			)}
+			{typeof window !== 'undefined' &&
+				createPortal(
+					<ProductsModal
+						isOpen={showModal}
+						onClose={() => setShowModal(false)}
+					/>,
+					window.document.body,
+				)}
 		</div>
 	);
 };
