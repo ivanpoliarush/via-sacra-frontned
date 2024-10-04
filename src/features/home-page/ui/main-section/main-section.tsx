@@ -33,7 +33,7 @@ export const MainSection = () => {
 						showArrow
 					/>
 				</Link>
-				<Link className={styles.link} href="/candles">
+				<Link className={styles.link} href="/prayers">
 					<Button
 						className={styles.button}
 						label="Envie uma oração"

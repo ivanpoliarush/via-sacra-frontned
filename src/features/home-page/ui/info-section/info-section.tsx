@@ -8,7 +8,7 @@ export const InfoSection = () => {
 				title="O poder da oração do Papa"
 				subtitle="Por que é importante"
 				description="Pedir uma oração ao Papa não é apenas um ato religioso; é uma oportunidade de receber uma bênção espiritual de um dos líderes mais reverenciados da Igreja. As orações do Papa ligam os indivíduos a uma tradição secular de fé e sucessão espiritual, fortalecendo o espírito e inspirando esperança. Quando uma oração vem do chefe da Igreja Católica, torna-se um símbolo de apoio que abrange todo o mundo cristão"
-				button={{ label: 'Envie uma oração', href: '/candles' }}
+				button={{ label: 'Envie uma oração', href: '/prayers' }}
 				image="/home-page/info-section/pope.png"
 				imageData={{
 					title: 'Jorge Mario Bergoglio',

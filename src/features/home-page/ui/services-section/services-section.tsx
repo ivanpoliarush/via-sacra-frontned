@@ -17,7 +17,7 @@ export const ServicesSection = () => {
 					image="/home-page/services-section/candles.png"
 				/>
 				<Service
-					href="/candles"
+					href="/prayers"
 					title="peça uma oração"
 					image="/home-page/services-section/pope.png"
 				/>
