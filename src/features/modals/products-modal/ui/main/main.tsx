@@ -14,11 +14,7 @@ const variants = {
 	},
 };
 
-export const ProductsModal = ({
-	isOpen,
-	onClose,
-	displayTotalPrice = false,
-}: ProductsModalProps) => {
+export const ProductsModal = ({ isOpen, onClose }: ProductsModalProps) => {
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
 	useEffect(() => {
@@ -45,7 +41,7 @@ export const ProductsModal = ({
 						<span className={meaCulpa.className}>S</span>
 						<span>eu pedido</span>
 					</p>
-					{displayTotalPrice && <p className={styles.price}>100$</p>}
+					<p className={styles.price}>100$</p>
 					<div className={styles.items}>
 						<Product title="Oração pelos filhos" price={5} />
 						<Product title="Oração pelos filhos" price={5} />

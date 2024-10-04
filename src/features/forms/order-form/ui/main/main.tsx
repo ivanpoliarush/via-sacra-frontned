@@ -12,7 +12,7 @@ import { createPortal } from 'react-dom';
 import styles from './main.module.css';
 import { OrderFormProps } from './main.props';
 
-export const OrderForm = ({ className, ...props }: OrderFormProps) => {
+export const OrderForm = ({ className, type, ...props }: OrderFormProps) => {
 	const [showModal, setShowModal] = useState(false);
 	const [selectedValue, setSelectedValue] = useState('Velas pela Saúde');
 
@@ -28,20 +28,22 @@ export const OrderForm = ({ className, ...props }: OrderFormProps) => {
 					</div>
 				</button>
 				<div className={styles.inputs}>
-					<Select
-						onChange={setSelectedValue}
-						selectedValue={selectedValue}
-						options={[
-							{
-								value: 'Velas pela Saúde',
-								label: 'Velas pela Saúde',
-							},
-							{
-								value: 'Velas para o repouso',
-								label: 'Velas para o repouso',
-							},
-						]}
-					/>
+					{type === 'candle' && (
+						<Select
+							onChange={setSelectedValue}
+							selectedValue={selectedValue}
+							options={[
+								{
+									value: 'Velas pela Saúde',
+									label: 'Velas pela Saúde',
+								},
+								{
+									value: 'Velas para o repouso',
+									label: 'Velas para o repouso',
+								},
+							]}
+						/>
+					)}
 					<Input
 						manyRows
 						className={styles.textarea}

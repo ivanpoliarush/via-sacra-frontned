@@ -1,4 +1,5 @@
 import { Header } from '@/features/layout/ui/header/header';
+import { OrderSection } from '../order-section/order-section';
 import { PrayersSection } from '../prayers-section/prayers-section';
 
 export const PrayersPage = () => {
@@ -7,6 +8,7 @@ export const PrayersPage = () => {
 			<Header />
 			<main>
 				<PrayersSection />
+				<OrderSection />
 			</main>
 		</>
 	);

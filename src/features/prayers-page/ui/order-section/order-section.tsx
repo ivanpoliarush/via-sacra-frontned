@@ -6,23 +6,22 @@ export const OrderSection = () => {
 	return (
 		<section className={styles.wrapper}>
 			<p className={styles.title}>
-				<span>Acender uma </span>
-				<span className={meaCulpa.className}>V</span>
-				<span>ela</span>
+				<span className={meaCulpa.className}>P</span>
+				<span>eça uma oração</span>
 			</p>
 			<p className={styles.description}>
-				Acender uma vela é um símbolo de fé e esperança. Através do
-				nosso serviço, você pode acender uma vela no Vaticano, pedindo
-				saúde para você ou seus entes queridos. Que sua luz brilhe
-				diante de Deus, no coração da fé católica.
+				A oração é o caminho para Deus, e oferecemos a você a
+				oportunidade de enviar seus pedidos de oração diretamente ao
+				Vaticano. Suas intenções serão levadas aos lugares sagrados,
+				onde orarão por você.
 			</p>
 			<div className={styles.formWrapper}>
 				<img
 					className={styles.formImage}
-					src="/candles-page/form/image.png"
+					src="/prayers-page/form/image.png"
 					alt=""
 				/>
-				<OrderForm type="candle" className={styles.form} />
+				<OrderForm type="prayer" className={styles.form} />
 			</div>
 		</section>
 	);
