@@ -1,6 +1,7 @@
 'use client';
 
 import { Arrow } from '@/assets/icons/arrow';
+import { montserrat } from '@/shared/fonts';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { isValidElement } from 'react';
@@ -44,7 +45,9 @@ export const Button = ({
 					{isValidElement(label) ? (
 						label
 					) : (
-						<p className={styles.label}>{label}</p>
+						<p className={clsx(styles.label, montserrat.className)}>
+							{label}
+						</p>
 					)}
 					{showArrow && (
 						<motion.div

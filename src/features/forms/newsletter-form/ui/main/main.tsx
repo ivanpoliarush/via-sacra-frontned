@@ -1,3 +1,4 @@
+import { montserrat } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import clsx from 'clsx';
 import styles from './main.module.css';
@@ -12,7 +13,7 @@ export const NewsletterForm = ({
 			<p className={styles.title}>Assinar Newsletters</p>
 			<div className={styles.inputWrapper}>
 				<input
-					className={styles.input}
+					className={clsx(styles.input, montserrat.className)}
 					placeholder="Digite seu e-mail"
 				/>
 				<Button className={styles.button} label="Assine agora" />

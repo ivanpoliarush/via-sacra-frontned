@@ -1,5 +1,7 @@
 'use client';
 
+import { montserrat } from '@/shared/fonts';
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import styles from './select.module.css';
@@ -85,7 +87,7 @@ export const Select = ({ options, selectedValue, onChange }: SelectProps) => {
 			animate={isOpen ? 'open' : 'closed'}
 			className={styles.wrapper}>
 			<motion.button
-				className={styles.button}
+				className={clsx(styles.button, montserrat.className)}
 				whileTap={{ scale: 0.97 }}
 				onClick={() => setIsOpen(!isOpen)}>
 				{label}

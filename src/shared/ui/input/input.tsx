@@ -1,5 +1,6 @@
 'use client';
 
+import { montserrat } from '@/shared/fonts';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import styles from './input.module.css';
@@ -25,7 +26,7 @@ export const Input = ({
 				variants={variants}
 				animate={error ? 'error' : undefined}
 				transition={{ duration: 0.75 }}
-				className={clsx(styles.input, className, {
+				className={clsx(styles.input, className, montserrat.className, {
 					[styles.error]: error,
 				})}
 				{...(props as any)}
@@ -41,7 +42,7 @@ export const Input = ({
 			transition={{ duration: 0.75 }}>
 			{label && <p className={styles.label}>{label}</p>}
 			<input
-				className={clsx(styles.input, className, {
+				className={clsx(styles.input, className, montserrat.className, {
 					[styles.error]: error,
 				})}
 				{...(props as any)}
