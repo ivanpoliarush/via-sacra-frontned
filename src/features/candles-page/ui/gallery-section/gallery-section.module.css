@@ -1,0 +1,26 @@
+.wrapper {
+	margin-top: 43px;
+	margin-bottom: 104px;
+}
+
+.title {
+	color: #241b0a;
+	text-align: center;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 64px;
+}
+
+.gallery {
+	margin-bottom: 32px;
+}
+
+.button {
+	width: 100%;
+}
+
+.button p {
+	font-size: 16px !important;
+}

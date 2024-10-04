@@ -3,6 +3,7 @@
 import { Arrow } from '@/assets/icons/arrow';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { isValidElement } from 'react';
 import styles from './button.module.css';
 import { ButtonProps } from './button.props';
 
@@ -40,7 +41,11 @@ export const Button = ({
 				<div className={styles.loader} />
 			) : (
 				<>
-					<p className={styles.label}>{label}</p>
+					{isValidElement(label) ? (
+						label
+					) : (
+						<p className={styles.label}>{label}</p>
+					)}
 					{showArrow && (
 						<motion.div
 							variants={variants.arrow}
