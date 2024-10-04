@@ -82,6 +82,15 @@
 	align-items: center;
 }
 
+.link {
+	width: calc(50% - 4px);
+	text-decoration: none;
+}
+
+.link .button {
+	width: 100% !important;
+}
+
 .button {
 	height: 43px !important;
 	width: calc(50% - 4px);

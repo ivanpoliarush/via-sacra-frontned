@@ -2,6 +2,7 @@ import { meaCulpa } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 import styles from './candle.module.css';
 import { CandleProps } from './candle.props';
 
@@ -53,11 +54,13 @@ export const Candle = ({
 								label="Ordem"
 								color="light"
 							/>
-							<Button
-								className={styles.button}
-								label="Mais"
-								color="dark"
-							/>
+							<Link href="/article" className={styles.link}>
+								<Button
+									className={styles.button}
+									label="Mais"
+									color="dark"
+								/>
+							</Link>
 						</div>
 					</motion.div>
 				)}
