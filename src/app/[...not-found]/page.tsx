@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
-const Payment = () => {
+const NotFoundPage = () => {
 	return redirect('/');
 };
 
-export default Payment;
+export default NotFoundPage;

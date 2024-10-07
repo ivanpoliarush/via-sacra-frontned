@@ -2,7 +2,6 @@
 
 import { Cart } from '@/assets/icons/cart';
 import { ProductsModal } from '@/features/modals/products-modal/ui/main/main';
-import { meaCulpa } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import { Input } from '@/shared/ui/input/input';
 import { Select } from '@/shared/ui/select/select';
@@ -53,13 +52,7 @@ export const OrderForm = ({ className, type, ...props }: OrderFormProps) => {
 					<Input placeholder="Seu e-mail" />
 				</div>
 			</div>
-			<div>
-				<div className={styles.priceWrapper}>
-					<p className={styles.priceTitle}>no total</p>
-					<p className={clsx(styles.price, meaCulpa.className)}>5$</p>
-				</div>
-				<Button className={styles.button} label="Ordem" />
-			</div>
+			<Button className={styles.button} label="Ordem" />
 			{typeof window !== 'undefined' &&
 				createPortal(
 					<ProductsModal

@@ -40,13 +40,6 @@ export const Candle = ({
 								</span>
 								<span>{title.slice(1)}</span>
 							</p>
-							<div className={styles.priceWrapper}>
-								<p
-									className={clsx(
-										styles.price,
-										meaCulpa.className,
-									)}>{`${price}$`}</p>
-							</div>
 						</div>
 						<div className={styles.buttons}>
 							<Button

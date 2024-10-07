@@ -41,11 +41,10 @@ export const ProductsModal = ({ isOpen, onClose }: ProductsModalProps) => {
 						<span className={meaCulpa.className}>S</span>
 						<span>eu pedido</span>
 					</p>
-					<p className={styles.price}>100$</p>
 					<div className={styles.items}>
-						<Product title="Oração pelos filhos" price={5} />
-						<Product title="Oração pelos filhos" price={5} />
-						<Product title="Oração pelos filhos" price={5} />
+						<Product title="Oração pelos filhos" />
+						<Product title="Oração pelos filhos" />
+						<Product title="Oração pelos filhos" />
 					</div>
 					<Button label="Confirmar" className={styles.button} />
 				</motion.dialog>
