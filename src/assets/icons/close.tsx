@@ -12,8 +12,8 @@ export const CloseIcon = (props: IconProps) => (
 		<path
 			d="M6 6L14 14M6 14L14 6"
 			stroke="#241B0A"
-			stroke-linecap="round"
-			stroke-linejoin="round"
+			strokeLinecap="round"
+			strokeLinejoin="round"
 		/>
 	</svg>
 );
