@@ -6,8 +6,8 @@
 			"thirdPart": "y envía tus oraciones"
 		},
 		"buttons": {
-			"orderCandle": "enciende una vela",
-			"orderPrayer": "envía una oración"
+			"orderCandle": "Enciende una vela",
+			"orderPrayer": "Envía una oración"
 		},
 		"articles": {
 			"candle": {
@@ -178,7 +178,7 @@
 	},
 	"articles": {
 		"title": "Luz de esperanza",
-		"button": "pedir una vela",
+		"button": "Pedir una vela",
 		"articles": [
 			"En un pequeño pueblo, ubicado en una región pintoresca, había una antigua iglesia católica. La iglesia era famosa por sus hermosas vidrieras y su ambiente acogedor, que atraía a peregrinos y turistas de todo el mundo. Pero destacó por su popularidad un tipo único de vela, producida por artesanos locales. Estas velas fueron llamadas \"velas de la esperanza\". Su característica especial era que cada vela tenía un color y aroma único, reflejando diversas virtudes: las velas rojas simbolizaban el amor, las velas amarillas simbolizaban la alegría, las velas azules simbolizaban la paz y las velas verdes simbolizaban la esperanza. Cada color fue cuidadosamente elegido y elaborado con cera natural y aceites esenciales, lo que hace que cada vela no solo sea hermosa sino también llena de significado.",
 			"Estas velas fueron llamadas \"velas de la esperanza\". Su característica especial era que cada vela tenía un color y aroma único, reflejando diversas virtudes: las velas rojas simbolizaban el amor, las velas amarillas simbolizaban la alegría, las velas azules simbolizaban la paz y las velas verdes simbolizaban la esperanza. Cada color fue cuidadosamente elegido y elaborado con cera natural y aceites esenciales, lo que hace que cada vela no solo sea hermosa sino también llena de significado.",
