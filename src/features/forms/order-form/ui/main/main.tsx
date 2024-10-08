@@ -11,9 +11,14 @@ import { createPortal } from 'react-dom';
 import styles from './main.module.css';
 import { OrderFormProps } from './main.props';
 
-export const OrderForm = ({ className, type, ...props }: OrderFormProps) => {
+export const OrderForm = ({
+	type,
+	className,
+	translatedTexts,
+	...props
+}: OrderFormProps) => {
 	const [showModal, setShowModal] = useState(false);
-	const [selectedValue, setSelectedValue] = useState('Velas pela Saúde');
+	const [selectedValue, setSelectedValue] = useState('health');
 
 	return (
 		<div className={clsx(styles.wrapper, className)} {...props}>
@@ -33,12 +38,14 @@ export const OrderForm = ({ className, type, ...props }: OrderFormProps) => {
 							selectedValue={selectedValue}
 							options={[
 								{
-									value: 'Velas pela Saúde',
-									label: 'Velas pela Saúde',
+									value: 'health',
+									label: translatedTexts.common.orderForm
+										.candleType.health,
 								},
 								{
-									value: 'Velas para o repouso',
-									label: 'Velas para o repouso',
+									value: 'rest',
+									label: translatedTexts.common.orderForm
+										.candleType.rest,
 								},
 							]}
 						/>
@@ -46,17 +53,25 @@ export const OrderForm = ({ className, type, ...props }: OrderFormProps) => {
 					<Input
 						manyRows
 						className={styles.textarea}
-						placeholder="Escreva aqui os nomes daqueles por quem você precisa orar (escreva de 1 a 5 nomes separados por vírgulas)"
+						placeholder={translatedTexts.common.orderForm.names}
 					/>
-					<Input placeholder="Nome, Sobrenome" />
-					<Input placeholder="Seu e-mail" />
+					<Input
+						placeholder={translatedTexts.common.orderForm.name}
+					/>
+					<Input
+						placeholder={translatedTexts.common.orderForm.email}
+					/>
 				</div>
 			</div>
-			<Button className={styles.button} label="Ordem" />
+			<Button
+				className={styles.button}
+				label={translatedTexts.common.order}
+			/>
 			{typeof window !== 'undefined' &&
 				createPortal(
 					<ProductsModal
 						isOpen={showModal}
+						translatedTexts={translatedTexts}
 						onClose={() => setShowModal(false)}
 					/>,
 					window.document.body,

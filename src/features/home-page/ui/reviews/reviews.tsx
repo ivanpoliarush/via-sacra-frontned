@@ -7,8 +7,14 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import styles from './reviews.module.css';
 
-export const Reviews = () => {
+export const Reviews = ({
+	translate,
+}: {
+	translate: { text: string; auhtor: { name: string; age: string } }[];
+}) => {
 	const [activeReviewIndex, setActiveReviewIndex] = useState<number>(0);
+
+	const reviews = REVIEWS(translate);
 
 	return (
 		<div className={styles.wrapper}>
@@ -17,10 +23,10 @@ export const Reviews = () => {
 			</div>
 			<div className={styles.mainContent}>
 				<p className={styles.text}>
-					{REVIEWS[activeReviewIndex]?.text}
+					{reviews[activeReviewIndex]?.text}
 				</p>
 				<motion.div className={styles.authors}>
-					{REVIEWS.map((review, index) => (
+					{reviews.map((review, index) => (
 						<div
 							key={review.author.name}
 							className={clsx(styles.author, {
@@ -50,7 +56,7 @@ export const Reviews = () => {
 											{review.author.name}
 										</p>
 										<p className={styles.authorAge}>
-											{`${review.author.age} anos`}
+											{review.author.age}
 										</p>
 									</motion.div>
 								)}

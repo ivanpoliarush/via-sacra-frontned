@@ -4,14 +4,14 @@ import { ReviewsSection } from '../reviews-section/reviews-section';
 import { ServicesSection } from '../services-section/services-section';
 import { WorkProgressSection } from '../work-progress-section/work-progress-section';
 
-export const HomePage = () => {
+export const HomePage = ({ lang }: { lang: string }) => {
 	return (
 		<main>
-			<MainSection />
-			<InfoSection />
-			<ServicesSection />
-			<WorkProgressSection />
-			<ReviewsSection />
+			<MainSection lang={lang} />
+			<InfoSection lang={lang} />
+			<ServicesSection lang={lang} />
+			<WorkProgressSection lang={lang} />
+			<ReviewsSection lang={lang} />
 		</main>
 	);
 };

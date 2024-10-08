@@ -14,7 +14,11 @@ const variants = {
 	},
 };
 
-export const ProductsModal = ({ isOpen, onClose }: ProductsModalProps) => {
+export const ProductsModal = ({
+	isOpen,
+	onClose,
+	translatedTexts,
+}: ProductsModalProps) => {
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
 	useEffect(() => {
@@ -38,15 +42,20 @@ export const ProductsModal = ({ isOpen, onClose }: ProductsModalProps) => {
 						<CloseIcon />
 					</button>
 					<p className={styles.title}>
-						<span className={meaCulpa.className}>S</span>
-						<span>eu pedido</span>
+						<span className={meaCulpa.className}>
+							{translatedTexts.common.yourOrder[0]}
+						</span>
+						<span>{translatedTexts.common.yourOrder.slice(1)}</span>
 					</p>
 					<div className={styles.items}>
-						<Product title="Oração pelos filhos" />
-						<Product title="Oração pelos filhos" />
-						<Product title="Oração pelos filhos" />
+						<Product title="Vela 1" />
+						<Product title="Vela 2" />
+						<Product title="Vela 3" />
 					</div>
-					<Button label="Confirmar" className={styles.button} />
+					<Button
+						label={translatedTexts.common.confirm}
+						className={styles.button}
+					/>
 				</motion.dialog>
 			)}
 		</AnimatePresence>

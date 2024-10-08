@@ -1,20 +1,25 @@
+import { getDictionary } from '@/app/[lang]/dictionaries';
 import { Header } from '@/features/layout/ui/header/header';
 import { meaCulpa } from '@/shared/fonts';
 import { Content } from '../content/content';
 import { DownButton } from '../down-button/down-button';
 import styles from './main.module.css';
 
-export const ArticlePage = () => {
+export const ArticlePage = async ({ lang }: { lang: string }) => {
+	const texts = await getDictionary(lang);
+
 	return (
 		<>
 			<Header />
 			<main className={styles.wrapper}>
 				<p className={styles.title}>
-					<span className={meaCulpa.className}>L</span>
-					<span>Luz da Esperança</span>
+					<span className={meaCulpa.className}>
+						{texts.articles.title[0]}
+					</span>
+					<span>{texts.articles.title.slice(1)}</span>
 				</p>
-				<Content className={styles.content} />
-				<DownButton />
+				<Content lang={lang} className={styles.content} />
+				<DownButton label={texts.articles.button} />
 			</main>
 		</>
 	);

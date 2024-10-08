@@ -3,12 +3,18 @@ import { montserrat } from '@/shared/fonts';
 import { ReactNode } from 'react';
 import './globals.css';
 
-const RootLayout = ({ children }: { children: ReactNode }) => {
+const RootLayout = ({
+	children,
+	params: { lang },
+}: {
+	children: ReactNode;
+	params: { lang: string };
+}) => {
 	return (
-		<html lang="en">
+		<html lang={lang}>
 			<body className={montserrat.className}>
 				{children}
-				<Footer />
+				<Footer lang={lang} />
 			</body>
 		</html>
 	);

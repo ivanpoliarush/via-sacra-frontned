@@ -1,3 +1,4 @@
+import { getDictionary } from '@/app/[lang]/dictionaries';
 import { Church } from '@/assets/icons/church';
 import { Images } from '@/assets/icons/images';
 import { Payment } from '@/assets/icons/payment';
@@ -6,34 +7,38 @@ import { meaCulpa } from '@/shared/fonts';
 import { WorkProgressItem } from '../work-progress-item/work-progress-item';
 import styles from './work-progress-section.module.css';
 
-export const WorkProgressSection = () => {
+export const WorkProgressSection = async ({ lang }: { lang: string }) => {
+	const texts = await getDictionary(lang);
+
 	return (
 		<section className={styles.wrapper}>
 			<p className={styles.title}>
-				<span>Como t</span>
-				<span className={meaCulpa.className}>R</span>
-				<span>abalhamos</span>
+				<span>{texts.home.workProgress.title.slice(0, 6)}</span>
+				<span className={meaCulpa.className}>
+					{texts.home.workProgress.title[6]}
+				</span>
+				<span>{texts.home.workProgress.title.slice(7)}</span>
 			</p>
 			<div className={styles.items}>
 				<WorkProgressItem
 					icon={Request}
-					title="Encomende on-line"
-					description="Envie uma oração Ou acenda uma vela em qualquer lugar"
+					title={texts.home.workProgress.request.title}
+					description={texts.home.workProgress.request.description}
 				/>
 				<WorkProgressItem
 					icon={Payment}
-					title="Pague on-line"
-					description="Pague online com cartãoGooglePay ou ApplePay"
+					title={texts.home.workProgress.payment.title}
+					description={texts.home.workProgress.payment.description}
 				/>
 				<WorkProgressItem
 					icon={Church}
-					title="Nós entregamos"
-					description="Entregamos sua oraçãoOu acendemos uma vela no Vaticano"
+					title={texts.home.workProgress.church.title}
+					description={texts.home.workProgress.church.description}
 				/>
 				<WorkProgressItem
 					icon={Images}
-					title="Reportagem fotográfica"
-					description="Fazemos uma foto de uma vela ou oração no Vaticano"
+					title={texts.home.workProgress.images.title}
+					description={texts.home.workProgress.images.description}
 				/>
 			</div>
 		</section>

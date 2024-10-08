@@ -8,4 +8,5 @@ export interface CandleProps
 	title: string;
 	price: number;
 	image: string;
+	translateTexts: Awaited<typeof import('../../../../dictionaries/pt.json')>;
 }

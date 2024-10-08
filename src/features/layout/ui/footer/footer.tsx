@@ -1,12 +1,15 @@
+import { getDictionary } from '@/app/[lang]/dictionaries';
 import { Instagram, Telegram } from '@/assets/icons/socials';
 import { NewsletterForm } from '@/features/forms/newsletter-form/ui/main/main';
 import styles from './footer.module.css';
 
-export const Footer = () => {
+export const Footer = async ({ lang }: { lang: string }) => {
+	const texts = await getDictionary(lang);
+
 	return (
 		<>
 			<footer className={styles.footer}>
-				<NewsletterForm />
+				<NewsletterForm lang={lang} />
 				<div className={styles.socials}>
 					<a href="https://t.me/brazil_ikonka">
 						<Telegram />
@@ -20,10 +23,12 @@ export const Footer = () => {
 					<p
 						className={
 							styles.text
-						}>{`© ${new Date().getFullYear()} Lift Media. All rights reserved.`}</p>
+						}>{`© ${new Date().getFullYear()} ${texts.footer.text}.`}</p>
 					<div className={styles.links}>
-						<p className={styles.text}>Terms of Service</p>
-						<p className={styles.text}>Privacy Policy</p>
+						<p className={styles.text}>{texts.footer.termsOfUse}</p>
+						<p className={styles.text}>
+							{texts.footer.privacyPolicy}
+						</p>
 					</div>
 				</div>
 				<img

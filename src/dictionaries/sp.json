@@ -189,7 +189,7 @@
 	"footer": {
 		"newsletters": {
 			"title": "Boletines Suscríbete",
-			"placholder": "Introduce tu correo electrónico",
+			"placeholder": "Introduce tu correo electrónico",
 			"submit": "Suscríbete ahora"
 		},
 		"termsOfUse": "Condiciones de uso",
@@ -200,6 +200,8 @@
 		"order": "Orden",
 		"more": "Más",
 		"requestModalTitle": "Tu pedido",
+		"confirm": "Confirmar",
+		"yourOrder": "Tu pedido",
 		"orderForm": {
 			"candleType": {
 				"health": "Velas para la salud",

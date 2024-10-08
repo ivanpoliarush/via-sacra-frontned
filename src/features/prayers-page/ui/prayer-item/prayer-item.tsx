@@ -36,7 +36,7 @@ const variants = {
 	},
 };
 
-export const PrayerItem = ({ title, text }: PrayerItemProps) => {
+export const PrayerItem = ({ title, text, buttonLabel }: PrayerItemProps) => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	return (
@@ -44,7 +44,10 @@ export const PrayerItem = ({ title, text }: PrayerItemProps) => {
 			<div className={styles.titleWrapper}>
 				<p className={styles.title}>{title}</p>
 				<div className={styles.actions}>
-					<Button className={styles.orderButton} label="Ordem" />
+					<Button
+						className={styles.orderButton}
+						label={buttonLabel}
+					/>
 					<motion.button
 						transition={{ duration: 0.3 }}
 						variants={variants.toggleButton}

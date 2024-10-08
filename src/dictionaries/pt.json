@@ -189,7 +189,7 @@
 	"footer": {
 		"newsletters": {
 			"title": "Boletins informativos Assinar",
-			"placholder": "Digite seu e-mail",
+			"placeholder": "Digite seu e-mail",
 			"submit": "Assinar agora"
 		},
 		"termsOfUse": "Termos de uso",
@@ -200,6 +200,8 @@
 		"order": "Ordem",
 		"more": "Mais",
 		"requestModalTitle": "Seu pedido",
+		"confirm": "Confirmar",
+		"yourOrder": "Seu pedido",
 		"orderForm": {
 			"candleType": {
 				"health": "Velas pela Saúde",

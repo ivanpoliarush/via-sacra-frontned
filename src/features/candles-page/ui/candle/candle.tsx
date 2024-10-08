@@ -10,9 +10,10 @@ export const Candle = ({
 	title,
 	price,
 	image,
-	className,
 	style,
 	active,
+	className,
+	translateTexts,
 	...props
 }: CandleProps) => {
 	return (
@@ -44,13 +45,13 @@ export const Candle = ({
 						<div className={styles.buttons}>
 							<Button
 								className={styles.button}
-								label="Ordem"
+								label={translateTexts.common.order}
 								color="light"
 							/>
 							<Link href="/article" className={styles.link}>
 								<Button
 									className={styles.button}
-									label="Mais"
+									label={translateTexts.common.more}
 									color="dark"
 								/>
 							</Link>

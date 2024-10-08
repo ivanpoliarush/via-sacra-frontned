@@ -8,22 +8,27 @@ import { Candle } from '../candle/candle';
 import styles from './gallery.module.css';
 import { GalleryProps } from './gallery.props';
 
-export const Gallery = ({ className, ...props }: GalleryProps) => {
+export const Gallery = ({
+	className,
+	translateTexts,
+	...props
+}: GalleryProps) => {
 	const [activeCandle, setActiveCandle] = useState<CandleType>(
 		CandleType.WIDE,
 	);
 
 	return (
 		<div className={clsx(styles.wrapper, className)} {...props}>
-			{CANDLES.map(candle => (
+			{CANDLES.map((candle, index) => (
 				<Candle
 					key={candle.id}
 					type={candle.id}
-					title={candle.title}
 					image={candle.image}
 					price={candle.price}
+					translateTexts={translateTexts}
 					active={activeCandle === candle.id}
 					onMouseEnter={() => setActiveCandle(candle.id)}
+					title={translateTexts.candles.gallery.candles[index]}
 				/>
 			))}
 		</div>
