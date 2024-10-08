@@ -3,25 +3,25 @@
 import { poppins } from '@/shared/fonts';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
 import styles from './language-switcher.module.css';
 
 const Language = ({
 	isActive,
-	onChange,
 	language,
 }: {
 	isActive: boolean;
 	language: string;
-	onChange: () => void;
 }) => {
 	const page = usePathname();
+	const currentPage = page.slice(3) || 'home';
 
 	return (
-		<button
-			className={clsx(styles.button, poppins.className)}
-			onClick={onChange}>
+		<Link
+			locale={language.toLowerCase()}
+			href={`/${language.toLowerCase()}`}
+			className={clsx(styles.button, poppins.className)}>
 			<p
 				className={clsx(styles.text, {
 					[styles.active]: isActive,
@@ -31,29 +31,21 @@ const Language = ({
 			{isActive && (
 				<motion.div
 					transition={{ duration: 0.2 }}
-					layoutId={`language-background-${page}`}
 					className={styles.background}
+					layoutId={currentPage}
 				/>
 			)}
-		</button>
+		</Link>
 	);
 };
 
 export const LanguageSwitcher = () => {
-	const [language, setLanguage] = useState('pt');
+	const pathname = usePathname();
 
 	return (
 		<div className={styles.wrapper}>
-			<Language
-				language="SP"
-				isActive={language === 'sp'}
-				onChange={() => setLanguage('sp')}
-			/>
-			<Language
-				language="PT"
-				isActive={language === 'pt'}
-				onChange={() => setLanguage('pt')}
-			/>
+			<Language language="SP" isActive={pathname.includes('/sp')} />
+			<Language language="PT" isActive={pathname.includes('/pt')} />
 		</div>
 	);
 };

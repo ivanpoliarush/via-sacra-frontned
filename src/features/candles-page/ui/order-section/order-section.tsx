@@ -19,7 +19,7 @@ export const OrderSection = () => {
 			<div className={styles.formWrapper}>
 				<img
 					className={styles.formImage}
-					src="/candles-page/form/image.png"
+					src="/images/candles-page/form/image.png"
 					alt=""
 				/>
 				<OrderForm type="candle" className={styles.form} />

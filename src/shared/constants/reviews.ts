@@ -4,7 +4,7 @@ export const REVIEWS = [
 		author: {
 			name: 'Maria',
 			age: 35,
-			photo: '/home-page/reviews-section/people/maria.png',
+			photo: '/images/home-page/reviews-section/people/maria.png',
 		},
 	},
 	{
@@ -12,7 +12,7 @@ export const REVIEWS = [
 		author: {
 			name: 'João',
 			age: 42,
-			photo: '/home-page/reviews-section/people/joao.png',
+			photo: '/images/home-page/reviews-section/people/joao.png',
 		},
 	},
 	{
@@ -20,7 +20,7 @@ export const REVIEWS = [
 		author: {
 			name: 'Letícia',
 			age: 29,
-			photo: '/home-page/reviews-section/people/leticia.png',
+			photo: '/images/home-page/reviews-section/people/leticia.png',
 		},
 	},
 	{
@@ -28,7 +28,7 @@ export const REVIEWS = [
 		author: {
 			name: 'Ana',
 			age: 50,
-			photo: '/home-page/reviews-section/people/ana.png',
+			photo: '/images/home-page/reviews-section/people/ana.png',
 		},
 	},
 	{
@@ -36,7 +36,7 @@ export const REVIEWS = [
 		author: {
 			name: 'Sérgio',
 			age: 38,
-			photo: '/home-page/reviews-section/people/sergio.png',
+			photo: '/images/home-page/reviews-section/people/sergio.png',
 		},
 	},
 ];

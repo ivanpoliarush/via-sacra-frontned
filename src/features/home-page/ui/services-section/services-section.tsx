@@ -14,12 +14,12 @@ export const ServicesSection = () => {
 				<Service
 					href="/candles"
 					title="acenda uma vela"
-					image="/home-page/services-section/candles.png"
+					image="/images/home-page/services-section/candles.png"
 				/>
 				<Service
 					href="/prayers"
 					title="peça uma oração"
-					image="/home-page/services-section/pope.png"
+					image="/images/home-page/services-section/pope.png"
 				/>
 			</div>
 		</section>

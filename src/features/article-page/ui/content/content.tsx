@@ -21,7 +21,7 @@ export const Content = ({ className, ...props }: ContentProps) => {
 					tornando cada vela não apenas bonita, mas também cheia de
 					significado
 				</p>
-				<img src="/article-page/candle.png" alt="" />
+				<img src="/images/article-page/candle.png" alt="" />
 			</div>
 			<p>
 				Essas velas eram chamadas de "velas da esperança". Sua
@@ -33,7 +33,7 @@ export const Content = ({ className, ...props }: ContentProps) => {
 				bonita, mas também cheia de significado
 			</p>
 			<div className={styles.flex}>
-				<img src="/article-page/sky.png" alt="" />
+				<img src="/images/article-page/sky.png" alt="" />
 				<p>
 					As pessoas iam à igreja para acender uma "vela da esperança"
 					em memória de seus entes queridos ou para pedir ajuda. Cada

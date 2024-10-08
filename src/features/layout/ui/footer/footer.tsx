@@ -28,7 +28,7 @@ export const Footer = () => {
 				</div>
 				<img
 					className={styles.background}
-					src="/layout/footer-background.png"
+					src="/images/layout/footer-background.png"
 					alt=""
 				/>
 			</footer>
