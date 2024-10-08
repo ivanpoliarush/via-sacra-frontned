@@ -1,9 +1,12 @@
+import { getDictionary } from '@/app/[lang]/dictionaries';
 import { PaymentForm } from '@/features/forms/payment-form/ui/main/main';
 import { Header } from '@/features/layout/ui/header/header';
 import { meaCulpa } from '@/shared/fonts';
 import styles from './main.module.css';
 
-export const PaymentPage = ({ lang }: { lang: string }) => {
+export const PaymentPage = async ({ lang }: { lang: string }) => {
+	const texts = await getDictionary(lang);
+
 	return (
 		<>
 			<Header lang={lang} />
@@ -12,7 +15,7 @@ export const PaymentPage = ({ lang }: { lang: string }) => {
 					<span className={meaCulpa.className}>P</span>
 					<span>agamento</span>
 				</p>
-				<PaymentForm />
+				<PaymentForm translatedTexts={texts} />
 			</main>
 		</>
 	);

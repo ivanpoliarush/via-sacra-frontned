@@ -14,8 +14,9 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './main.module.css';
+import { PaymentFormProps } from './main.props';
 
-export const PaymentForm = () => {
+export const PaymentForm = ({ translatedTexts }: PaymentFormProps) => {
 	const [showModal, setShowModal] = useState(false);
 
 	return (
@@ -81,6 +82,7 @@ export const PaymentForm = () => {
 				createPortal(
 					<ProductsModal
 						isOpen={showModal}
+						translatedTexts={translatedTexts}
 						onClose={() => setShowModal(false)}
 					/>,
 					window.document.body,
