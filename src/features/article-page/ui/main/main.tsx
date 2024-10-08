@@ -10,7 +10,7 @@ export const ArticlePage = async ({ lang }: { lang: string }) => {
 
 	return (
 		<>
-			<Header />
+			<Header lang={lang} />
 			<main className={styles.wrapper}>
 				<p className={styles.title}>
 					<span className={meaCulpa.className}>

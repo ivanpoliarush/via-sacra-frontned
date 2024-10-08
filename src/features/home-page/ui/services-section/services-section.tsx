@@ -18,13 +18,13 @@ export const ServicesSection = async ({ lang }: { lang: string }) => {
 			<div className={styles.services}>
 				<Service
 					lang={lang}
-					href="/candles"
+					href={`/${lang}/candles`}
 					title={texts.home.services.candleTitle}
 					image="/images/home-page/services-section/candles.png"
 				/>
 				<Service
 					lang={lang}
-					href="/prayers"
+					href={`/${lang}/prayers`}
 					title={texts.home.services.prayerTitle}
 					image="/images/home-page/services-section/pope.png"
 				/>

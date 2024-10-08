@@ -5,7 +5,7 @@ import { PrayersSection } from '../prayers-section/prayers-section';
 export const PrayersPage = ({ lang }: { lang: string }) => {
 	return (
 		<>
-			<Header />
+			<Header lang={lang} />
 			<main>
 				<PrayersSection lang={lang} />
 				<OrderSection lang={lang} />

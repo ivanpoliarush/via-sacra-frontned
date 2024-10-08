@@ -5,7 +5,7 @@ import { OrderSection } from '../order-section/order-section';
 export const CandlesPage = ({ lang }: { lang: string }) => {
 	return (
 		<>
-			<Header />
+			<Header lang={lang} />
 			<main>
 				<GallerySection lang={lang} />
 				<OrderSection lang={lang} />

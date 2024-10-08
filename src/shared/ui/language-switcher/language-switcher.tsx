@@ -20,7 +20,7 @@ const Language = ({
 	return (
 		<Link
 			locale={language.toLowerCase()}
-			href={`/${language.toLowerCase()}`}
+			href={`/${language.toLowerCase()}/${page.slice(4)}`}
 			className={clsx(styles.button, poppins.className)}>
 			<p
 				className={clsx(styles.text, {

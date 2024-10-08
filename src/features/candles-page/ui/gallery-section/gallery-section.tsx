@@ -15,7 +15,11 @@ export const GallerySection = async ({ lang }: { lang: string }) => {
 				</span>
 				<span>{texts.candles.gallery.title.slice(1)}</span>
 			</p>
-			<Gallery translateTexts={texts} className={styles.gallery} />
+			<Gallery
+				lang={lang}
+				translateTexts={texts}
+				className={styles.gallery}
+			/>
 			<OrderButton productsCount={2} lang={lang} />
 		</section>
 	);

@@ -13,7 +13,7 @@ export const InfoSection = async ({ lang }: { lang: string }) => {
 				description={texts.home.articles.prayer.text}
 				button={{
 					label: texts.home.buttons.orderPrayer,
-					href: '/prayers',
+					href: `/${lang}/prayers`,
 				}}
 				image="/images/home-page/info-section/pope.png"
 				imageData={{
@@ -28,7 +28,7 @@ export const InfoSection = async ({ lang }: { lang: string }) => {
 				description={texts.home.articles.candle.text}
 				button={{
 					label: texts.home.buttons.orderCandle,
-					href: '/candles',
+					href: `/${lang}/candles`,
 				}}
 				image="/images/home-page/info-section/candles.png"
 			/>

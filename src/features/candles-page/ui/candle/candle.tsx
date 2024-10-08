@@ -7,6 +7,7 @@ import styles from './candle.module.css';
 import { CandleProps } from './candle.props';
 
 export const Candle = ({
+	lang,
 	title,
 	price,
 	image,
@@ -48,7 +49,9 @@ export const Candle = ({
 								label={translateTexts.common.order}
 								color="light"
 							/>
-							<Link href="/article" className={styles.link}>
+							<Link
+								href={`/${lang}/article`}
+								className={styles.link}>
 								<Button
 									className={styles.button}
 									label={translateTexts.common.more}

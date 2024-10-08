@@ -5,10 +5,15 @@ import Link from 'next/link';
 import styles from './header.module.css';
 import { HeaderProps } from './header.props';
 
-export const Header = ({ logoClassName, className, ...props }: HeaderProps) => {
+export const Header = ({
+	logoClassName,
+	className,
+	lang,
+	...props
+}: HeaderProps) => {
 	return (
 		<header className={clsx(styles.header, className)} {...props}>
-			<Link href="/">
+			<Link href={`/${lang}`}>
 				<Logo className={logoClassName} />
 			</Link>
 			<LanguageSwitcher />

@@ -9,6 +9,7 @@ import styles from './gallery.module.css';
 import { GalleryProps } from './gallery.props';
 
 export const Gallery = ({
+	lang,
 	className,
 	translateTexts,
 	...props
@@ -21,6 +22,7 @@ export const Gallery = ({
 		<div className={clsx(styles.wrapper, className)} {...props}>
 			{CANDLES.map((candle, index) => (
 				<Candle
+					lang={lang}
 					key={candle.id}
 					type={candle.id}
 					image={candle.image}

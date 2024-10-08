@@ -3,10 +3,10 @@ import { Header } from '@/features/layout/ui/header/header';
 import { meaCulpa } from '@/shared/fonts';
 import styles from './main.module.css';
 
-export const PaymentPage = () => {
+export const PaymentPage = ({ lang }: { lang: string }) => {
 	return (
 		<>
-			<Header />
+			<Header lang={lang} />
 			<main className={styles.wrapper}>
 				<p className={styles.title}>
 					<span className={meaCulpa.className}>P</span>
