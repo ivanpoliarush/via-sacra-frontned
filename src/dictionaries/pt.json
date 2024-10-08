@@ -1,3 +1,213 @@
 {
-	"message": "PT"
+	"home": {
+		"title": {
+			"firstPart": "Acenda uma vela no",
+			"secondPart": "Vaticano",
+			"thirdPart": "e envie suas orações"
+		},
+		"buttons": {
+			"orderCandle": "Acenda uma vela",
+			"orderPrayer": "Envie uma oração"
+		},
+		"articles": {
+			"candle": {
+				"title": "Luz da Fé",
+				"subtitle": "Por que acender velas no Vaticano é importante",
+				"text": "Acender uma vela no Vaticano não é apenas um ritual religioso, mas um símbolo profundo de fé e oração. No coração do mundo católico, onde milhões de peregrinos rezaram, uma vela acesa representa a sua ligação com Deus e a unidade espiritual com os crentes de todo o mundo. Este ato é de humildade e esperança, quer você esteja buscando ajuda, expressando gratidão ou orando por entes queridos. Como centro da fé católica, o Vaticano confere um significado especial a esta tradição, tornando a sua oração parte de uma herança espiritual secular."
+			},
+			"prayer": {
+				"title": "O poder da oração do Papa",
+				"subtitle": "Por que é importante",
+				"text": "Pedir uma oração ao Papa não é apenas um ato religioso; é uma oportunidade de receber uma bênção espiritual de um dos líderes mais reverenciados da Igreja. As orações do Papa ligam os indivíduos a uma tradição secular de fé e sucessão espiritual, fortalecendo o espírito e inspirando esperança. Quando uma oração vem do chefe da Igreja Católica, torna-se um símbolo de apoio que abrange todo o mundo cristão",
+				"imageData": {
+					"title": "Jorge Mario Bergoglio",
+					"subtitle": "bispo da Igreja Católica Romana"
+				}
+			}
+		},
+		"services": {
+			"title": "Services",
+			"candleTitle": "Acenda uma vela",
+			"prayerTitle": "Peça uma oração"
+		},
+		"workProgress": {
+			"title": "Como tRabalhamos",
+			"request": {
+				"title": "Encomende on-line",
+				"description": "Envie uma oração Ou acenda uma vela em qualquer lugar"
+			},
+			"payment": {
+				"title": "Pague on-line",
+				"description": "Pague online com cartão GooglePay ou ApplePay"
+			},
+			"church": {
+				"title": "Nós entregamos",
+				"description": "Entregamos sua oraçãoOu acendemos uma vela no Vaticano"
+			},
+			"images": {
+				"title": "Reportagem fotográfica",
+				"description": "Fazemos uma foto de uma vela ou oração no Vaticano"
+			}
+		},
+		"reviews": {
+			"title": "Testemunhos",
+			"reviews": [
+				{
+					"text": "Sempre sonhei em visitar o Vaticano, mas com dois filhos pequenos e o trabalho, isso parecia impossível. Acender uma vela no Vaticano significava muito para mim, e eu não podia perder essa oportunidade. O site me ajudou a enviar minhas orações pela saúde do meu filho mais novo, e quando recebi a confirmação de que a vela foi acesa, senti literalmente um peso sair dos meus ombros. Foi como um toque pessoal em algo maior, uma fé que me sustenta todos os dias. Não consigo expressar o quão importante foi para mim saber que minha oração foi ouvida em um lugar tão sagrado.",
+					"auhtor": {
+						"name": "Maria",
+						"age": "35 anos"
+					}
+				},
+				{
+					"text": "Já fazia tempo que eu queria visitar o Vaticano, mas é muito longe e caro para a nossa família. Quando descobri que através deste site eu podia enviar pedidos de oração e acender velas no Vaticano, decidi tentar. Isso não é apenas um site — é uma conexão com algo sagrado. Quando enviei uma oração pela saúde da minha esposa, sabia que estariam rezando por ela no coração da fé católica. Nem precisei viajar para sentir esse retorno espiritual. Isso é mais do que um serviço — é uma verdadeira ajuda para aqueles que buscam a fé, mas não podem fisicamente alcançá-la",
+					"auhtor": {
+						"name": "João",
+						"age": "42 anos"
+					}
+				},
+				{
+					"text": "Desde pequena, sonhava em ver o Vaticano e me conectar com a história da fé, mas, honestamente, não é tão simples. Morar em uma cidade pequena e o trabalho não deixam muitas oportunidades para viagens como essa. E quando encontrei este site, foi uma verdadeira descoberta. Eu consegui enviar meu pedido de oração pela saúde dos meus pais e acender uma vela no Vaticano. Quando recebi a confirmação de que minha vela foi acesa, comecei a chorar. Isso não é apenas um serviço, é uma oportunidade real de fazer parte de algo maior, apesar da distância",
+					"auhtor": {
+						"name": "Letícia",
+						"age": "29 anos"
+					}
+				},
+				{
+					"text": "Visitar o Vaticano é um sonho da minha vida inteira. Mas, para ser sincera, parecia algo impossível: distância, custos, organização da viagem... Mas quando soube que podia enviar minha oração diretamente para lá, senti um alívio enorme. Através deste site, consegui acender uma vela e enviar uma oração pela paz na minha família. Assim que soube que a vela foi acesa, senti uma estranha sensação de paz. Foi como uma pequena, mas importante conexão com o Vaticano, que agora não parece tão distante. Nunca pensei que pela internet pudesse sentir um apoio espiritual tão grande",
+					"auhtor": {
+						"name": "Ana",
+						"age": "50 anos"
+					}
+				},
+				{
+					"text": "Para mim, uma viagem ao Vaticano é algo do tipo sonho. Sempre quis visitar esse lugar sagrado, mas a vida é cheia de outras prioridades, onde o dinheiro e o tempo são sempre destinados a coisas mais importantes. Quando soube deste serviço, achei uma ótima opção. Consegui acender uma vela no Vaticano pela saúde da minha mãe, e esse momento foi muito mais significativo do que eu esperava. Quando recebi a confirmação, percebi que, mesmo à distância, é possível sentir o poder da oração. Não foi apenas um gesto simbólico, eu realmente senti uma conexão com o Vaticano e com minha fé",
+					"auhtor": {
+						"name": "Sérgio",
+						"age": "38 anos"
+					}
+				}
+			]
+		}
+	},
+	"candles": {
+		"gallery": {
+			"title": "Galeria de velas",
+			"candles": ["Vela 1", "Vela 2", "Vela 3"]
+		},
+		"order": {
+			"title": "Acender uma Vela",
+			"subtitle": "Acender uma vela é um símbolo de fé e esperança. Através do nosso serviço, você pode acender uma vela no Vaticano, pedindo saúde para você ou seus entes queridos. Que sua luz brilhe diante de Deus, no coração da fé católica."
+		}
+	},
+	"prayers": {
+		"list": {
+			"title": "Livro de orações",
+			"subtitle": "Em momentos difíceis, a oração ajuda a encontrar apoio e paz interior. Aqui você pode encontrar a oração que melhor se adapta à sua situação de vida. Você pode escolher uma oração para cada dia ou utilizá-la em um pedido enviado ao Vaticano, onde orarão por você nos lugares sagrados",
+			"prayers": [
+				{
+					"title": "Oração pela saúde",
+					"text": "Senhor, Tu és nosso Grande Médico e Fonte de todas as bênçãos. Hoje venho a Ti em oração pela saúde dos meus entes queridos, (nomes). Dá-lhes força para superar as doenças, fortalece seus espíritos e cura seus corpos. Que a Tua infinita misericórdia os envolva, enchendo seus corações de paz e esperança. Eu confio que em Tuas mãos estão a cura e o alívio. Que eles sintam a Tua presença ao seu lado, ganhando força e fé a cada dia. Agradeço por tudo o que já fizeste e pelo que continuas a fazer em suas vidas. Amém."
+				},
+				{
+					"title": "Oração por força espiritual",
+					"text": "Senhor, neste momento de fraqueza, eu me volto a Ti, pedindo por força espiritual para mim e para meus entes queridos, (nomes). Em Tuas mãos está nossa força, Tu és nosso Sustentador em tempos difíceis. Quando nos sentimos perdidos ou cansados, dá-nos a fé para continuar caminhando e a sabedoria para enxergar o Teu caminho. Enche nossos corações com coragem e serenidade, para que possamos enfrentar todas as provações da vida com o Teu apoio. Que a Tua graça nos acompanhe sempre neste caminho. Amém."
+				},
+				{
+					"title": "Oração de gratidão",
+					"text": "Senhor, meu coração está cheio de gratidão por Tuas infinitas bênçãos. Obrigado por saúde, amor e cuidado, que envias a mim e aos meus entes queridos, (nomes). Agradeço-Te por todas as alegrias e provações que me fortalecem na fé. Que minhas palavras e ações todos os dias Te glorifiquem. Ajuda-me a nunca esquecer Tuas misericórdias e a ser sempre grato, mesmo nos momentos difíceis. Que o Teu amor continue a guiar-me no caminho da vida. Amém."
+				},
+				{
+					"title": "Oração pelo sucesso no trabalho",
+					"text": "Senhor, Tu nos deste talentos e oportunidades para servir ao mundo. Eu Te peço por bênçãos no meu trabalho e no trabalho dos meus entes queridos, (nomes). Dá-nos sabedoria e perseverança para alcançarmos nossos objetivos, ajuda-nos a usar nossas habilidades para o bem dos outros. Guia nossos esforços rumo ao sucesso, para que eles beneficiem não apenas a nós, mas também aos que nos rodeiam. Que o nosso trabalho sempre Te glorifique e seja realizado com a Tua ajuda. Amém."
+				},
+				{
+					"title": "Oração pelos filhos",
+					"text": "Senhor, Tu és nosso Pai e Protetor. Eu Te peço que protejas e guies meus filhos, (nomes). Dá-lhes sabedoria e força para seguir o Teu caminho, protege-os de todo mal e enche seus corações de bondade e amor. Que eles sempre sintam o Teu cuidado e amor, e que sua fé se fortaleça a cada dia. Agradeço-Te por este presente inestimável — meus filhos, e peço que a Tua graça sempre os acompanhe na vida. Amém."
+				},
+				{
+					"title": "Oração de gratidão pelos pais",
+					"text": "Senhor, agradeço-Te pelos meus pais, (nomes), por todo o amor, cuidado e ensinamentos que me deram. Dá-me forças e sabedoria para honrá-los e apoiá-los na velhice. Que eles estejam sempre cercados pela Tua misericórdia e proteção. Peço-Te que lhes concedas saúde, paz e alegria, e que o Teu amor preencha seus corações. Sou grato por eles estarem sempre ao meu lado, e peço a Tua graça em suas vidas. Amém."
+				},
+				{
+					"title": "Oração pelas almas dos falecidos",
+					"text": "Senhor, peço-Te pelo descanso das almas dos meus entes queridos, (nomes), que foram acolhidos em Teus braços. Recebe-os no Teu Reino Celestial e concede-lhes descanso eterno. Que suas almas encontrem paz em Tua presença, e que a luz da Tua graça brilhe sempre sobre eles. Fortalece a minha fé, sabendo que eles agora estão em Tua eterna misericórdia e amor. Amém."
+				},
+				{
+					"title": "Oração pela cura da alma",
+					"text": "Senhor, Tu és nosso curador não só do corpo, mas também da alma. Eu Te peço que cures nossas almas — a minha e a dos meus entes queridos, (nomes). Purifica-nos da dor, amargura e sofrimento que carregamos. Enche-nos com a Tua paz e amor, ajuda-nos a encontrar alegria e tranquilidade no coração. Que a Tua graça renove nossas almas e nos devolva a força espiritual. Amém."
+				},
+				{
+					"title": "Oração pela paz na família",
+					"text": "Senhor, Tu és nossa Fonte de amor e união. Eu Te peço por paz e harmonia em minha família, (nomes). Que o Teu infinito amor aqueça nossos corações e nos ajude a superar todos os mal-entendidos e conflitos. Fortalece nosso vínculo uns com os outros, dá-nos paciência e sabedoria para compreender e apoiar uns aos outros. Ajuda-nos a perdoar e deixar para trás as mágoas, que a Tua paz encha nossa casa todos os dias. Torna nossa família mais forte e mais próxima de Ti. Amém."
+				},
+				{
+					"title": "Oração pela paz no mundo",
+					"text": "Senhor, Tu és o Deus da paz e da justiça. Neste momento de turbulência, eu Te peço que traga paz ao coração de todas as pessoas. Que o Teu amor vença o ódio e a hostilidade, que a Tua misericórdia remova os conflitos e divisões. Precisamos da Tua paz mais do que nunca. Desperta em nós o espírito de compaixão e amor fraternal, ajuda-nos a ser portadores da Tua paz em nossas famílias, comunidades e no mundo. Que cada dia traga mais harmonia e unidade entre os povos. Amém."
+				},
+				{
+					"title": "Oração por paz interior",
+					"text": "Senhor, Tu és nosso Consolador nos momentos de ansiedade e preocupações. Eu Te peço por paz no meu coração e nos corações dos meus entes queridos, (nomes). Ajuda-nos a deixar de lado os medos e as preocupações, confiando no Teu plano e encontrando serenidade no Teu amor infinito. Enche nossos corações com luz e liberta-nos das inquietações. Dá-nos força para enfrentar as dificuldades com fé e perseverança, sabendo que Tu estás sempre conosco. Que a Tua paz, que ultrapassa todo entendimento, esteja sempre presente em nós. Amém."
+				},
+				{
+					"title": "Oração pelo perdão",
+					"text": "Senhor, Tu és nosso Pai Misericordioso, e eu venho a Ti pedindo perdão por mim e por meus entes queridos, (nomes). Perdoa-nos por nossos erros, nossos pecados e nossas fraquezas. Dá-nos forças para perdoar os outros, assim como Tu nos perdoas. Que nossos corações se libertem das mágoas e rancores, para que possamos viver em paz e amor. Purificados pela Tua graça, buscamos ser melhores e seguir o Teu caminho. Amém."
+				},
+				{
+					"title": "Oração por ajuda nos momentos difíceis",
+					"text": "Senhor, em tempos de provação, eu peço a Tua ajuda para mim e meus entes queridos, (nomes). Dá-nos força para superar as dificuldades, concede-nos sabedoria para tomar as decisões certas e fé para não perder a esperança. Sabemos que, contigo, nada é impossível. Guia-nos neste momento difícil e ajuda-nos a superar tudo o que está em nosso caminho. Que o Teu amor e graça sejam nosso escudo e suporte. Amém."
+				},
+				{
+					"title": "Oração por proteção",
+					"text": "Senhor, Tu és nossa fortaleza e refúgio. Eu Te peço, protege a mim e aos meus entes queridos, (nomes), de todo mal e perigos. Que a Tua mão sagrada nos guarde em todos os nossos caminhos. Dá-nos paz e confiança em Tua proteção quando enfrentarmos ameaças da vida. Que os anjos da guarda estejam sempre a nos proteger, e que o Teu amor seja nosso escudo. Amém."
+				},
+				{
+					"title": "Oração por força para perdoar",
+					"text": "Senhor, eu Te peço que me ajudes a mim e aos meus entes queridos, (nomes), a aprender a perdoar. Concede-nos um coração cheio de misericórdia, para que possamos deixar para trás as mágoas e viver em paz e amor. Ajuda-nos a não guardar rancor contra aqueles que nos machucaram e ensina-nos a ser tão misericordiosos quanto Tu. Que o perdão nos traga paz interior e nos liberte do peso das ofensas passadas. Amém."
+				},
+				{
+					"title": "Oração pela bênção do dia",
+					"text": "Senhor, agradeço-Te por mais um dia que me concedeste. Peço-Te que abençoes este dia para mim e meus entes queridos, (nomes). Que nossos atos e decisões sejam agradáveis a Ti, e que a Tua mão nos guie em tudo. Dá-nos forças para superar qualquer dificuldade que possa surgir e concede-nos alegria em cada momento deste dia. Que a Tua graça nos acompanhe em tudo o que fazemos. Amém."
+				}
+			]
+		},
+		"order": {
+			"title": "Peça uma oração",
+			"subtitle": "A oração é o caminho para Deus, e oferecemos a você a oportunidade de enviar seus pedidos de oração diretamente ao Vaticano. Suas intenções serão levadas aos lugares sagrados, onde orarão por você."
+		}
+	},
+	"articles": {
+		"title": "LLuz da Esperança",
+		"button": "Encomende uma vela",
+		"articles": [
+			"Em uma pequena cidade, localizada em uma região pitoresca, havia uma antiga igreja católica. A igreja era famosa por seus belos vitrais e pela atmosfera acolhedora, que atraía peregrinos e turistas de todo o mundo. Mas um tipo único de vela, produzido pelos mestres locais, se destacou pela sua popularidade. Essas velas eram chamadas de \"velas da esperança\". Sua característica especial era que cada vela tinha uma cor e um aroma únicos, refletindo várias virtudes: velas vermelhas simbolizavam amor, amarelas — alegria, azuis — paz, e verdes — esperança. Cada cor era cuidadosamente escolhida e feita de cera natural e óleos essenciais, tornando cada vela não apenas bonita, mas também cheia de significado",
+			"Essas velas eram chamadas de \"velas da esperança\". Sua característica especial era que cada vela tinha uma cor e um aroma únicos, refletindo várias virtudes: velas vermelhas simbolizavam amor, amarelas — alegria, azuis — paz, e verdes — esperança. Cada cor era cuidadosamente escolhida e feita de cera natural e óleos essenciais, tornando cada vela não apenas bonita, mas também cheia de significado",
+			"As pessoas iam à igreja para acender uma \"vela da esperança\" em memória de seus entes queridos ou para pedir ajuda. Cada vela se tornava um símbolo de suas esperanças e orações. À noite, quando as luzes da igreja se apagavam, as brilhantes chamas das velas criavam uma atmosfera mágica, imergindo todos em tranquilidade e paz. Certa vez, uma jovem chamada Maria chegou à cidade. Ela estava em busca de paz interior após um período difícil em sua vida. Ao entrar na igreja, sentiu-se envolvida por um calor e uma calma. Ao se aproximar da mesa com as velas, ela parou diante de uma vela verde — símbolo da esperança. Pegando-a nas mãos, refletiu sobre seus sonhos e desejos. Maria acendeu a vela e fez uma oração silenciosa, pedindo por uma nova oportunidade e luz em sua vida. Depois, ela permaneceu na igreja, observando a dança das chamas, e sentiu o peso das preocupações e ansiedades começar a se dissipar",
+			"Algumas semanas depois, quando Maria retornou à cidade, percebeu mudanças em si mesma. Sua vida estava se preenchendo com novas oportunidades, e ela começou a seguir suas aspirações. Ela entendeu que a vela acesa naquela noite se tornara não apenas um símbolo de esperança, mas também o começo de seu novo caminho. Com o tempo, a história das \"velas da esperança\" se espalhou muito além da cidade. As pessoas começaram a vir para acender suas velas e deixar suas orações. Cada vela acesa se tornava parte de uma grande história, conectando corações e almas, inspirando as pessoas a novos começos e ajudando-as a encontrar esperança mesmo nos tempos mais sombrios"
+		]
+	},
+	"footer": {
+		"newsletters": {
+			"title": "Boletins informativos Assinar",
+			"placholder": "Digite seu e-mail",
+			"submit": "Assinar agora"
+		},
+		"termsOfUse": "Termos de uso",
+		"privacyPolicy": "Política de Privacidade",
+		"text": "Lift Media. Todos os direitos reservados."
+	},
+	"common": {
+		"order": "Ordem",
+		"more": "Mais",
+		"requestModalTitle": "Seu pedido",
+		"orderForm": {
+			"candleType": {
+				"health": "Velas pela Saúde",
+				"rest": "Velas para o repouso"
+			},
+			"names": "Escreva aqui os nomes daqueles por quem você precisa orar (escreva de 1 a 5 nomes separados por vírgulas)",
+			"name": "Nome, Sobrenome",
+			"email": "Seu e-mail"
+		}
+	}
 }
