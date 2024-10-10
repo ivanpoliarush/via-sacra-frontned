@@ -1,6 +1,8 @@
 'use client';
 
+import { ToastModal } from '@/features/modals/toast-modal/ui/main/main';
 import { montserrat } from '@/shared/fonts';
+import { useToastMessage } from '@/shared/hooks/use-toast-message';
 import { validateEmail } from '@/shared/lib/validations';
 import { Button } from '@/shared/ui/button/button';
 import { Input } from '@/shared/ui/input/input';
@@ -15,6 +17,7 @@ export const NewsletterForm = ({
 	className,
 	...props
 }: NewsletterFormProps) => {
+	const [toastMessage, setToastMessage] = useToastMessage();
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
 	const [email, setEmail] = useState('');
@@ -32,10 +35,10 @@ export const NewsletterForm = ({
 
 			setLoading(true);
 			await subscribeNewsletter(email);
-
-			setEmail('');
 		} finally {
 			setLoading(false);
+			setEmail('');
+			setToastMessage(translateTexts.footer.newsletters.toastMessage);
 		}
 	};
 
@@ -61,6 +64,7 @@ export const NewsletterForm = ({
 					label={translateTexts.footer.newsletters.submit}
 				/>
 			</div>
+			<ToastModal isOpen={Boolean(toastMessage)} message={toastMessage} />
 		</div>
 	);
 };

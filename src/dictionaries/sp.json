@@ -190,7 +190,8 @@
 		"newsletters": {
 			"title": "Boletines Suscríbete",
 			"placeholder": "Introduce tu correo electrónico",
-			"submit": "Suscríbete ahora"
+			"submit": "Suscríbete ahora",
+			"toastMessage": "Te has suscrito correctamente a las actualizaciones."
 		},
 		"termsOfUse": "Condiciones de uso",
 		"privacyPolicy": "política de privacidad",

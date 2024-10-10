@@ -190,7 +190,8 @@
 		"newsletters": {
 			"title": "Boletins informativos Assinar",
 			"placeholder": "Digite seu e-mail",
-			"submit": "Assinar agora"
+			"submit": "Assinar agora",
+			"toastMessage": "Você se inscreveu com sucesso nas atualizações"
 		},
 		"termsOfUse": "Termos de uso",
 		"privacyPolicy": "Política de Privacidade",
