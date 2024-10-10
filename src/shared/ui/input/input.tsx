@@ -14,6 +14,7 @@ const variants = {
 
 export const Input = ({
 	wrapperClassName,
+	animation = true,
 	className,
 	manyRows,
 	error,
@@ -38,7 +39,7 @@ export const Input = ({
 		<motion.div
 			className={clsx(styles.wrapper, wrapperClassName)}
 			variants={variants}
-			animate={error ? 'error' : undefined}
+			animate={error && animation ? 'error' : undefined}
 			transition={{ duration: 0.75 }}>
 			{label && <p className={styles.label}>{label}</p>}
 			<input

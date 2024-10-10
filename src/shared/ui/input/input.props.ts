@@ -7,6 +7,7 @@ export interface InputProps
 	> {
 	label?: string;
 	error?: boolean;
+	animation?: boolean;
 	wrapperClassName?: string;
 	manyRows?: boolean;
 }

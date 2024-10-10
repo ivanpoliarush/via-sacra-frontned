@@ -9,7 +9,7 @@ export const Footer = async ({ lang }: { lang: string }) => {
 	return (
 		<>
 			<footer className={styles.footer}>
-				<NewsletterForm lang={lang} />
+				<NewsletterForm translateTexts={texts} />
 				<div className={styles.socials}>
 					<a href="https://t.me/brazil_ikonka">
 						<Telegram />

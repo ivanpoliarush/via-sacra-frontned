@@ -1,28 +1,64 @@
-import { getDictionary } from '@/app/[lang]/dictionaries';
+'use client';
+
 import { montserrat } from '@/shared/fonts';
+import { validateEmail } from '@/shared/lib/validations';
 import { Button } from '@/shared/ui/button/button';
+import { Input } from '@/shared/ui/input/input';
 import clsx from 'clsx';
+import { useEffect, useState } from 'react';
+import { subscribeNewsletter } from '../../api';
 import styles from './main.module.css';
 import { NewsletterFormProps } from './main.props';
 
-export const NewsletterForm = async ({
+export const NewsletterForm = ({
+	translateTexts,
 	className,
-	lang,
 	...props
 }: NewsletterFormProps) => {
-	const texts = await getDictionary(lang);
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState(false);
+	const [email, setEmail] = useState('');
+
+	useEffect(() => {
+		setError(false);
+	}, [email]);
+
+	const handleSubmit = async () => {
+		try {
+			if (!email || !validateEmail(email)) {
+				setError(true);
+				return;
+			}
+
+			setLoading(true);
+			await subscribeNewsletter(email);
+
+			setEmail('');
+		} finally {
+			setLoading(false);
+		}
+	};
 
 	return (
 		<div className={clsx(styles.wrapper, className)} {...props}>
-			<p className={styles.title}>{texts.footer.newsletters.title}</p>
+			<p className={styles.title}>
+				{translateTexts.footer.newsletters.title}
+			</p>
 			<div className={styles.inputWrapper}>
-				<input
+				<Input
+					value={email}
+					error={error}
+					animation={false}
+					wrapperClassName={styles.input}
+					onChange={event => setEmail(event.target.value)}
 					className={clsx(styles.input, montserrat.className)}
-					placeholder={texts.footer.newsletters.placeholder}
+					placeholder={translateTexts.footer.newsletters.placeholder}
 				/>
 				<Button
+					loading={loading}
+					onClick={handleSubmit}
 					className={styles.button}
-					label={texts.footer.newsletters.submit}
+					label={translateTexts.footer.newsletters.submit}
 				/>
 			</div>
 		</div>
