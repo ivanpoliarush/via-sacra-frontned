@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
 body {
 	background: #fff5e4;
 	padding: 25px 150px 180px 150px;

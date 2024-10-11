@@ -17,6 +17,7 @@ const variants = {
 export const ProductsModal = ({
 	isOpen,
 	onClose,
+	products,
 	translatedTexts,
 }: ProductsModalProps) => {
 	const dialogRef = useRef<HTMLDialogElement>(null);
@@ -48,9 +49,9 @@ export const ProductsModal = ({
 						<span>{translatedTexts.common.yourOrder.slice(1)}</span>
 					</p>
 					<div className={styles.items}>
-						<Product title="Vela 1" />
-						<Product title="Vela 2" />
-						<Product title="Vela 3" />
+						{products.map(product => (
+							<Product key={product.id} {...product} />
+						))}
 					</div>
 					<Button
 						label={translatedTexts.common.confirm}

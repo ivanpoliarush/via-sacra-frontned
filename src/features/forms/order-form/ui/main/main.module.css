@@ -12,6 +12,11 @@
 	margin-bottom: 12px;
 }
 
+.cartButton.disabled {
+	pointer-events: none;
+	opacity: 0.8;
+}
+
 .countBadge {
 	top: -5px;
 	right: -5px;

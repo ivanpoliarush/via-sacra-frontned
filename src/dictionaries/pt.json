@@ -210,7 +210,8 @@
 			},
 			"names": "Escreva aqui os nomes daqueles por quem você precisa orar (escreva de 1 a 5 nomes separados por vírgulas)",
 			"name": "Nome, Sobrenome",
-			"email": "Seu e-mail"
+			"email": "Seu e-mail",
+			"toastMessage": "Seu pedido foi enviado"
 		}
 	}
 }

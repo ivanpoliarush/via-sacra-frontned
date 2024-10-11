@@ -1,7 +1,7 @@
 import { getDictionary } from '@/app/[lang]/dictionaries';
 import { meaCulpa } from '@/shared/fonts';
-import { OrderButton } from '@/shared/ui/order-button/order-button';
 import { Gallery } from '../gallery/gallery';
+import { OrderButtonWrapper } from '../order-button-wrapper/order-button-wrapper';
 import styles from './gallery-section.module.css';
 
 export const GallerySection = async ({ lang }: { lang: string }) => {
@@ -20,7 +20,7 @@ export const GallerySection = async ({ lang }: { lang: string }) => {
 				translateTexts={texts}
 				className={styles.gallery}
 			/>
-			<OrderButton productsCount={2} lang={lang} />
+			<OrderButtonWrapper label={texts.common.order} />
 		</section>
 	);
 };

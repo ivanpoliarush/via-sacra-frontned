@@ -3,10 +3,6 @@ import { CandlesStore } from '../types/candles-store';
 
 export const useCandlesStore = createStore<CandlesStore>((get, set) => ({
 	products: [],
-	candleType: 'health',
-	names: [],
-	clientName: '',
-	clientEmail: '',
 
 	addProduct: name => {
 		const { products } = get();
@@ -19,17 +15,9 @@ export const useCandlesStore = createStore<CandlesStore>((get, set) => ({
 
 		set({ products: products.filter(product => product.id !== id) });
 	},
-	setCandleType: candleType => set({ candleType }),
-	setClientName: clientName => set({ clientName }),
-	setClientEmail: clientEmail => set({ clientEmail }),
-	setNames: names => set({ names }),
 	clear: () => {
 		set({
 			products: [],
-			names: [],
-			clientName: '',
-			clientEmail: '',
-			candleType: 'health',
 		});
 	},
 }));

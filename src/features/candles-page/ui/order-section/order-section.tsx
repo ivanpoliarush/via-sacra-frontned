@@ -1,6 +1,6 @@
 import { getDictionary } from '@/app/[lang]/dictionaries';
-import { OrderForm } from '@/features/forms/order-form/ui/main/main';
 import { meaCulpa } from '@/shared/fonts';
+import { OrderFormWrapper } from '../order-form-wrapper/order-form-wrapper';
 import styles from './order-section.module.css';
 
 export const OrderSection = async ({ lang }: { lang: string }) => {
@@ -8,7 +8,7 @@ export const OrderSection = async ({ lang }: { lang: string }) => {
 	const titleWords = texts.candles.order.title.split(' ');
 
 	return (
-		<section className={styles.wrapper}>
+		<section className={styles.wrapper} id="order">
 			<p className={styles.title}>
 				<span>
 					{titleWords.slice(0, titleWords.length - 1).join(' ') + ' '}
@@ -25,11 +25,7 @@ export const OrderSection = async ({ lang }: { lang: string }) => {
 					src="/images/candles-page/form/image.png"
 					alt=""
 				/>
-				<OrderForm
-					translatedTexts={texts}
-					type="candle"
-					className={styles.form}
-				/>
+				<OrderFormWrapper translatedTexts={texts} />
 			</div>
 		</section>
 	);

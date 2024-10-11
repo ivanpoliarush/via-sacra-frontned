@@ -1,10 +1,15 @@
+'use client';
+
 import { meaCulpa } from '@/shared/fonts';
 import { Button } from '@/shared/ui/button/button';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
+import { useCandlesStore } from '../../hooks/use-candles-store';
 import styles from './candle.module.css';
 import { CandleProps } from './candle.props';
+
+const { addProduct } = useCandlesStore.getStore();
 
 export const Candle = ({
 	lang,
@@ -17,6 +22,8 @@ export const Candle = ({
 	translateTexts,
 	...props
 }: CandleProps) => {
+	const { products } = useCandlesStore();
+
 	return (
 		<div
 			className={clsx(styles.wrapper, className, {
@@ -45,6 +52,8 @@ export const Candle = ({
 						</div>
 						<div className={styles.buttons}>
 							<Button
+								disabled={products.length >= 99}
+								onClick={() => addProduct(title)}
 								className={styles.button}
 								label={translateTexts.common.order}
 								color="light"

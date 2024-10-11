@@ -25,6 +25,7 @@ export const Button = ({
 	className,
 	label,
 	loading,
+	disabled,
 	showArrow,
 	color = 'dark',
 	...props
@@ -36,6 +37,7 @@ export const Button = ({
 			className={clsx(styles.wrapper, className, styles[color], {
 				[styles.withArrow]: showArrow,
 				[styles.loading]: loading,
+				[styles.disabled]: disabled,
 			})}
 			{...(props as any)}>
 			{loading ? (
