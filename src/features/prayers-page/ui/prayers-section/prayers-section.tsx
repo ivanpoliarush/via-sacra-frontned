@@ -1,6 +1,6 @@
 import { getDictionary } from '@/app/[lang]/dictionaries';
 import { meaCulpa } from '@/shared/fonts';
-import { OrderButton } from '@/shared/ui/order-button/order-button';
+import { OrderButtonWrapper } from '../order-button-wrapper/order-button-wrapper';
 import { PrayerItem } from '../prayer-item/prayer-item';
 import styles from './prayers-section.module.css';
 
@@ -22,10 +22,11 @@ export const PrayersSection = async ({ lang }: { lang: string }) => {
 						{...prayer}
 						buttonLabel={texts.common.order}
 						key={index}
+						lang={lang}
 					/>
 				))}
 			</div>
-			<OrderButton lang={lang} productsCount={2} />
+			<OrderButtonWrapper label={texts.common.order} />
 		</section>
 	);
 };

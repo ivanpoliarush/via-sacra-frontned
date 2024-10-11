@@ -56,6 +56,7 @@ export const ProductsModal = ({
 					<Button
 						label={translatedTexts.common.confirm}
 						className={styles.button}
+						onClick={onClose}
 					/>
 				</motion.dialog>
 			)}

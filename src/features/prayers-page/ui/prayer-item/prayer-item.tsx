@@ -4,6 +4,7 @@ import { Triangle } from '@/assets/icons/triangle';
 import { Button } from '@/shared/ui/button/button';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import { usePrayerStore } from '../../hooks/use-prayer-store';
 import styles from './prayer-item.module.css';
 import { PrayerItemProps } from './prayer-item.props';
 
@@ -36,8 +37,14 @@ const variants = {
 	},
 };
 
-export const PrayerItem = ({ title, text, buttonLabel }: PrayerItemProps) => {
+export const PrayerItem = ({
+	title,
+	text,
+	lang,
+	buttonLabel,
+}: PrayerItemProps) => {
 	const [isExpanded, setIsExpanded] = useState(false);
+	const { products, addProduct } = usePrayerStore();
 
 	return (
 		<div className={styles.wrapper}>
@@ -45,6 +52,8 @@ export const PrayerItem = ({ title, text, buttonLabel }: PrayerItemProps) => {
 				<p className={styles.title}>{title}</p>
 				<div className={styles.actions}>
 					<Button
+						onClick={() => addProduct(title)}
+						disabled={products.length >= 99}
 						className={styles.orderButton}
 						label={buttonLabel}
 					/>

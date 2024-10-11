@@ -1,13 +1,13 @@
 import { getDictionary } from '@/app/[lang]/dictionaries';
-import { OrderForm } from '@/features/forms/order-form/ui/main/main';
 import { meaCulpa } from '@/shared/fonts';
+import { OrderFormWrapper } from '../order-form-wrapper/order-form-wrapper';
 import styles from './order-section.module.css';
 
 export const OrderSection = async ({ lang }: { lang: string }) => {
 	const texts = await getDictionary(lang);
 
 	return (
-		<section className={styles.wrapper}>
+		<section className={styles.wrapper} id="order">
 			<p className={styles.title}>
 				<span className={meaCulpa.className}>
 					{texts.prayers.order.title[0]}
@@ -21,11 +21,7 @@ export const OrderSection = async ({ lang }: { lang: string }) => {
 					src="/images/prayers-page/form/image.png"
 					alt=""
 				/>
-				<OrderForm
-					type="prayer"
-					translatedTexts={texts}
-					className={styles.form}
-				/>
+				<OrderFormWrapper lang={lang} translatedTexts={texts} />
 			</div>
 		</section>
 	);
