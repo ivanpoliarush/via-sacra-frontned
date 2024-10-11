@@ -81,6 +81,7 @@ export const PaymentForm = ({ translatedTexts }: PaymentFormProps) => {
 			{typeof window !== 'undefined' &&
 				createPortal(
 					<ProductsModal
+						products={[]}
 						isOpen={showModal}
 						translatedTexts={translatedTexts}
 						onClose={() => setShowModal(false)}
