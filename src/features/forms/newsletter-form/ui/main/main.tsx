@@ -27,12 +27,12 @@ export const NewsletterForm = ({
 	}, [email]);
 
 	const handleSubmit = async () => {
-		try {
-			if (!email || !validateEmail(email)) {
-				setError(true);
-				return;
-			}
+		if (!email || !validateEmail(email)) {
+			setError(true);
+			return;
+		}
 
+		try {
 			setLoading(true);
 			await subscribeNewsletter(email);
 		} finally {
