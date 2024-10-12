@@ -20,3 +20,31 @@
 	gap: 20px;
 	width: 100%;
 }
+
+@media (max-width: 900px) {
+	.wrapper {
+		gap: 48px;
+	}
+
+	.services {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 640px) {
+	.title {
+		font-size: 56px;
+	}
+}
+
+@media (max-width: 485px) {
+	.title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 425px) {
+	.title {
+		font-size: 28px;
+	}
+}

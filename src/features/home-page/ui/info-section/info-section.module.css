@@ -5,3 +5,9 @@
 	margin-bottom: 104px;
 	flex-direction: column;
 }
+
+@media (max-width: 900px) {
+	.wrapper {
+		margin-bottom: 56px;
+	}
+}

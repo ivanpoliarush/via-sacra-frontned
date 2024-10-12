@@ -9,9 +9,8 @@ export const Service = async ({ image, title, href, lang }: ServiceProps) => {
 	const texts = await getDictionary(lang);
 
 	return (
-		<div
-			className={styles.wrapper}
-			style={{ backgroundImage: `url('${image}')` }}>
+		<div className={styles.wrapper}>
+			<img className={styles.image} src={image} alt="" />
 			<div className={styles.blur} />
 			<p className={styles.title}>
 				<span className={meaCulpa.className}>
