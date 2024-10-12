@@ -14,3 +14,39 @@ body {
 	padding: 25px 150px 180px 150px;
 	overflow-x: hidden;
 }
+
+@media (max-width: 1350px) {
+	body {
+		padding: 25px 84px 180px 84px;
+	}
+}
+
+@media (max-width: 1024px) {
+	body {
+		padding: 25px 64px 270px 64px;
+	}
+}
+
+@media (max-width: 800px) {
+	body {
+		padding: 25px 56px 270px 56px;
+	}
+}
+
+@media (max-width: 670px) {
+	body {
+		padding: 25px 48px 270px 48px;
+	}
+}
+
+@media (max-width: 485px) {
+	body {
+		padding: 25px 36px 270px 36px;
+	}
+}
+
+@media (max-width: 400px) {
+	body {
+		padding: 25px 20px 270px 20px;
+	}
+}

@@ -6,6 +6,8 @@
 	position: relative;
 	border-radius: 48px;
 	flex-direction: column;
+	background-repeat: no-repeat;
+	object-fit: contain;
 	padding: 40px 62px 28px 62px;
 	justify-content: space-between;
 	box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.12);

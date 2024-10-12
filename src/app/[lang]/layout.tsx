@@ -1,4 +1,3 @@
-import { Footer } from '@/features/layout/ui/footer/footer';
 import { montserrat } from '@/shared/fonts';
 import { ReactNode } from 'react';
 import './globals.css';
@@ -14,7 +13,7 @@ const RootLayout = ({
 		<html lang={lang}>
 			<body className={montserrat.className}>
 				{children}
-				<Footer lang={lang} />
+				{/* <Footer lang={lang} /> */}
 			</body>
 		</html>
 	);

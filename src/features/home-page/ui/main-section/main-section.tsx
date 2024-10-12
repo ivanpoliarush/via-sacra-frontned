@@ -11,22 +11,33 @@ export const MainSection = async ({ lang }: { lang: string }) => {
 
 	return (
 		<section className={styles.wrapper}>
-			<Header lang={lang} logoClassName={styles.logo} />
-			<div className={styles.titleWrapper}>
-				<p className={clsx(styles.title, styles.firstTitle)}>
-					{texts.home.title.firstPart}
-				</p>
-				<p
-					className={clsx(
-						styles.largeTitle,
-						styles.secondTitle,
-						meaCulpa.className,
-					)}>
-					{texts.home.title.secondPart}
-				</p>
-				<p className={clsx(styles.title, styles.thirdTitle)}>
-					{texts.home.title.thirdPart}
-				</p>
+			<div className={styles.mainContent}>
+				<img
+					className={styles.backgrounfImage}
+					src="/images/home-page/main-section/background.png"
+					alt=""
+				/>
+				<Header
+					lang={lang}
+					logoClassName={styles.logo}
+					className={styles.headerWrapper}
+				/>
+				<div className={styles.titleWrapper}>
+					<p className={clsx(styles.title, styles.firstTitle)}>
+						{texts.home.title.firstPart}
+					</p>
+					<p
+						className={clsx(
+							styles.largeTitle,
+							styles.secondTitle,
+							meaCulpa.className,
+						)}>
+						{texts.home.title.secondPart}
+					</p>
+					<p className={clsx(styles.title, styles.thirdTitle)}>
+						{texts.home.title.thirdPart}
+					</p>
+				</div>
 			</div>
 			<div className={styles.buttons}>
 				<Link
