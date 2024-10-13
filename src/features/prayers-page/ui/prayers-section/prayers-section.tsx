@@ -15,14 +15,13 @@ export const PrayersSection = async ({ lang }: { lang: string }) => {
 				</span>
 				<span>{texts.prayers.order.title.slice(1)}</span>
 			</p>
-			<p className={styles.subtitle}>{texts.prayers.order.subtitle}</p>
+			<p className={styles.description}>{texts.prayers.order.subtitle}</p>
 			<div className={styles.prayers}>
 				{texts.prayers.list.prayers.map((prayer, index) => (
 					<PrayerItem
 						{...prayer}
 						buttonLabel={texts.common.order}
 						key={index}
-						lang={lang}
 					/>
 				))}
 			</div>

@@ -37,12 +37,7 @@ const variants = {
 	},
 };
 
-export const PrayerItem = ({
-	title,
-	text,
-	lang,
-	buttonLabel,
-}: PrayerItemProps) => {
+export const PrayerItem = ({ title, text, buttonLabel }: PrayerItemProps) => {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const { products, addProduct } = usePrayerStore();
 

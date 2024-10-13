@@ -10,6 +10,7 @@
 	display: flex;
 	width: 100%;
 	padding: 8px 12px;
+	align-items: center;
 	justify-content: space-between;
 	background: #241b0a;
 }
@@ -21,6 +22,7 @@
 	font-weight: 400;
 	line-height: 130%;
 	letter-spacing: -0.408px;
+	padding-right: 10px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -64,4 +66,37 @@
 	font-weight: 400;
 	line-height: 130%;
 	letter-spacing: -0.408px;
+}
+
+@media (max-width: 1100px) {
+	.title {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 485px) {
+	.titleWrapper {
+		display: grid;
+		row-gap: 10px;
+		grid-template-areas:
+			'title toggleButton'
+			'orderButton orderButton';
+	}
+
+	.title {
+		grid-area: title;
+	}
+
+	.orderButton {
+		width: 100% !important;
+		grid-area: orderButton;
+	}
+
+	.toggleButton {
+		grid-area: toggleButton;
+	}
+
+	.actions {
+		display: contents;
+	}
 }
