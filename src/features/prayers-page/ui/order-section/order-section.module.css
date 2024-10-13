@@ -24,12 +24,76 @@
 }
 
 .formWrapper {
+	gap: 76px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .formImage {
-	width: 45%;
+	width: 50%;
 	border-radius: 48px;
+	object-fit: cover;
 	box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 1280px) {
+	.formWrapper {
+		gap: 48px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.formWrapper {
+		gap: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 56px;
+	}
+
+	.description {
+		font-size: 16px;
+	}
+
+	.formWrapper {
+		gap: 12px;
+	}
+}
+
+@media (max-width: 700px) {
+	.formWrapper {
+		flex-direction: column;
+	}
+
+	.formImage {
+		width: 100%;
+	}
+}
+
+@media (max-width: 640px) {
+	.title {
+		font-size: 48px;
+	}
+
+	.description {
+		margin: 0 auto 48px auto;
+	}
+}
+
+@media (max-width: 485px) {
+	.title {
+		font-size: 48px;
+	}
+}
+
+@media (max-width: 400px) {
+	.title {
+		font-size: 28px;
+	}
+
+	.description {
+		font-size: 14px;
+	}
 }
