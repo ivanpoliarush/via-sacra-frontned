@@ -85,7 +85,7 @@
 
 .link {
 	text-decoration: none;
-	height: 64px !important;
+	height: 100% !important;
 	width: calc(50% - 6px) !important;
 }
 
@@ -161,6 +161,7 @@
 
 	.buttons {
 		flex-direction: column;
+		gap: 12px;
 	}
 
 	.link {
