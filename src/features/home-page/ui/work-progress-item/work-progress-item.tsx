@@ -7,10 +7,10 @@ export const WorkProgressItem = ({
 	description,
 }: WorkProgressItemProps) => {
 	return (
-		<div>
+		<div className={styles.wrapper}>
 			<div className={styles.imageWrapper}>
 				<div className={styles.iconWrapper}>
-					<Icon />
+					<Icon className={styles.icon} />
 				</div>
 			</div>
 			<p className={styles.title}>{title}</p>
