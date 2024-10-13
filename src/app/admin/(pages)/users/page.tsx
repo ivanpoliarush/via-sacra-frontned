@@ -1,3 +1,12 @@
+import { AdminLoginGuard } from '@/features/admin-page/ui/components/login-guard/login-guard';
 import { UsersPage } from '@/features/admin-page/ui/pages/orders-page/users-page';
 
-export default UsersPage;
+const UsersPageWrapper = () => {
+	return (
+		<AdminLoginGuard isAuth={true}>
+			<UsersPage />
+		</AdminLoginGuard>
+	);
+};
+
+export default UsersPageWrapper;
