@@ -1,6 +1,7 @@
 'use client';
 
 import { CANDLES } from '@/shared/constants/candles';
+import { useWindowDimensions } from '@/shared/hooks/use-window-dimensions';
 import { CandleType } from '@/shared/types/candle';
 import clsx from 'clsx';
 import { useState } from 'react';
@@ -14,9 +15,22 @@ export const Gallery = ({
 	translateTexts,
 	...props
 }: GalleryProps) => {
+	const widnowDimensions = useWindowDimensions();
 	const [activeCandle, setActiveCandle] = useState<CandleType>(
 		CandleType.WIDE,
 	);
+
+	const handleMouseEnter = (candle: CandleType) => {
+		if (widnowDimensions.width > 900) {
+			setActiveCandle(candle);
+		}
+	};
+
+	const handleClick = (candle: CandleType) => {
+		if (widnowDimensions.width <= 900) {
+			setActiveCandle(candle);
+		}
+	};
 
 	return (
 		<div className={clsx(styles.wrapper, className)} {...props}>
@@ -28,9 +42,13 @@ export const Gallery = ({
 					image={candle.image}
 					price={candle.price}
 					translateTexts={translateTexts}
-					active={activeCandle === candle.id}
-					onMouseEnter={() => setActiveCandle(candle.id)}
+					onClick={() => handleClick(candle.id)}
+					onMouseEnter={() => handleMouseEnter(candle.id)}
 					title={translateTexts.candles.gallery.candles[index]}
+					active={
+						activeCandle === candle.id ||
+						widnowDimensions.width <= 550
+					}
 				/>
 			))}
 		</div>

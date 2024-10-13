@@ -26,16 +26,6 @@
 	background: #fff5e4;
 }
 
-.wrapper:hover {
-	border: 1px solid #241b0a;
-	background: #fff5e4;
-}
-
-.wrapper.light:hover {
-	border: 1px solid #fff5e4;
-	background: #241b0a;
-}
-
 .wrapper.disabled {
 	pointer-events: none;
 	opacity: 0.8;
@@ -63,20 +53,32 @@
 	color: #241b0a;
 }
 
-.wrapper:hover .label {
-	color: #241b0a;
-}
-
-.wrapper.light:hover .label {
-	color: #fff5e4;
-}
-
 .wrapper .arrow path {
 	transition: 0.3s all;
 }
 
 .wrapper:hover .arrow path {
 	stroke: #241b0a;
+}
+
+@media (hover: hover) {
+	.wrapper:hover {
+		border: 1px solid #241b0a;
+		background: #fff5e4;
+	}
+
+	.wrapper.light:hover {
+		border: 1px solid #fff5e4;
+		background: #241b0a;
+	}
+
+	.wrapper:hover .label {
+		color: #241b0a;
+	}
+
+	.wrapper.light:hover .label {
+		color: #fff5e4;
+	}
 }
 
 @keyframes rotation {
