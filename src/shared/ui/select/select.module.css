@@ -42,3 +42,10 @@
 .item:hover {
 	background: #fff;
 }
+
+@media (max-width: 768px) {
+	.button,
+	.item {
+		font-size: 16px;
+	}
+}

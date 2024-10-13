@@ -164,11 +164,13 @@ export const OrderForm = ({
 					<Input
 						{...name.events}
 						{...name.values}
+						className={styles.input}
 						placeholder={translatedTexts.common.orderForm.name}
 					/>
 					<Input
 						{...email.events}
 						{...email.values}
+						className={styles.input}
 						placeholder={translatedTexts.common.orderForm.email}
 					/>
 				</div>
