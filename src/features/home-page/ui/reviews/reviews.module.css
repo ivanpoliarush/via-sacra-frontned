@@ -79,3 +79,81 @@
 	line-height: 20px;
 	opacity: 0.3;
 }
+
+@media (max-width: 1160px) {
+	.wrapper {
+		padding: 0 24px 0 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.iconWrapper {
+		padding: 12px 24px 12px 0;
+	}
+}
+
+@media (max-width: 720px) {
+	.authors {
+		gap: 7px;
+		position: relative;
+	}
+
+	.author.active {
+		top: 0;
+		position: absolute;
+	}
+
+	.author:not(.active) {
+		margin-top: 170px;
+	}
+}
+
+@media (max-width: 670px) {
+	.wrapper {
+		gap: 0;
+		padding: 0;
+	}
+
+	.iconWrapper {
+		padding: 0 15px 8px 15px;
+	}
+
+	.reviewIcon {
+		width: 35px;
+	}
+
+	.text {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 550px) {
+	.iconWrapper {
+		padding: 0 15px 0 0;
+	}
+}
+
+@media (max-width: 485px) {
+	.author.active {
+		width: 100%;
+	}
+}
+
+@media (max-width: 425px) {
+	.iconWrapper {
+		padding: 0 7px 0 0;
+		margin-top: -10px;
+	}
+
+	.reviewIcon {
+		width: 17px;
+	}
+
+	.text {
+		font-size: 14px;
+	}
+
+	.author.active {
+		padding: 16px;
+	}
+}

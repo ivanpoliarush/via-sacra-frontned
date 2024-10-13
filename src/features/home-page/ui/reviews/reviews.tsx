@@ -19,7 +19,7 @@ export const Reviews = ({
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.iconWrapper}>
-				<ReviewsIcon />
+				<ReviewsIcon className={styles.reviewIcon} />
 			</div>
 			<div className={styles.mainContent}>
 				<p className={styles.text}>
