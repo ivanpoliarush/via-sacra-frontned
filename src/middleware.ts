@@ -5,7 +5,7 @@ const defaultLocale = 'pt';
 
 export function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl;
-	if (pathname.includes('/images')) {
+	if (pathname.includes('/images') || pathname.includes('/admin')) {
 		return;
 	}
 
