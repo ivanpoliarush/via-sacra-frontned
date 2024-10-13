@@ -24,3 +24,15 @@
 	line-height: 27px;
 	text-align: center;
 }
+
+@media (max-width: 768px) {
+	.modal {
+		width: 70vw;
+	}
+}
+
+@media (max-width: 485px) {
+	.modal {
+		width: 85vw;
+	}
+}

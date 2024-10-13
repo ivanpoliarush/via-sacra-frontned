@@ -92,4 +92,9 @@
 	.button p {
 		color: #241b0a !important;
 	}
+
+	.loader {
+		border-color: #241b0a !important;
+		border-bottom-color: transparent !important;
+	}
 }

@@ -9,4 +9,5 @@ export interface ButtonProps
 	loading?: boolean;
 	color?: 'dark' | 'light';
 	showArrow?: boolean;
+	laderClassName?: string;
 }

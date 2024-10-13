@@ -61,6 +61,7 @@ export const NewsletterForm = ({
 					loading={loading}
 					onClick={handleSubmit}
 					className={styles.button}
+					laderClassName={styles.loader}
 					label={translateTexts.footer.newsletters.submit}
 				/>
 			</div>

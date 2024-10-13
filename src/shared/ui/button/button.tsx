@@ -27,6 +27,7 @@ export const Button = ({
 	loading,
 	disabled,
 	showArrow,
+	laderClassName,
 	color = 'dark',
 	...props
 }: ButtonProps) => {
@@ -41,7 +42,7 @@ export const Button = ({
 			})}
 			{...(props as any)}>
 			{loading ? (
-				<div className={styles.loader} />
+				<div className={clsx(styles.loader, laderClassName)} />
 			) : (
 				<>
 					{isValidElement(label) ? (
