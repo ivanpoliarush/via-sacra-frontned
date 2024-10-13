@@ -24,12 +24,6 @@ export const Footer = async ({ lang }: { lang: string }) => {
 						className={
 							styles.text
 						}>{`© ${new Date().getFullYear()} ${texts.footer.text}.`}</p>
-					<div className={styles.links}>
-						<p className={styles.text}>{texts.footer.termsOfUse}</p>
-						<p className={styles.text}>
-							{texts.footer.privacyPolicy}
-						</p>
-					</div>
 				</div>
 				<img
 					className={styles.background}

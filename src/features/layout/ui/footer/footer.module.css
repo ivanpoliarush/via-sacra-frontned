@@ -45,3 +45,62 @@
 	right: -150px;
 	z-index: -1;
 }
+
+@media (max-width: 1350px) {
+	.background {
+		left: -84px;
+		right: -84px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.background {
+		left: -64px;
+		right: -64px;
+		bottom: -270px;
+	}
+}
+
+@media (max-width: 800px) {
+	.background {
+		left: -56px;
+		right: -56px;
+	}
+}
+
+@media (max-width: 670px) {
+	.background {
+		left: -48px;
+		right: -48px;
+	}
+}
+
+@media (max-width: 510px) {
+	.socials {
+		justify-content: center;
+	}
+
+	.text {
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 485px) {
+	.background {
+		left: -36px;
+		right: -36px;
+	}
+}
+
+@media (max-width: 400px) {
+	.background {
+		left: -20px;
+		right: -20px;
+	}
+
+	.text {
+		width: 90%;
+	}
+}
