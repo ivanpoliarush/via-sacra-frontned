@@ -12,7 +12,7 @@ export const AdminLoginGuard = ({ isAuth, children }: AdminLoginGuardProps) => {
 	}
 
 	if (isAuthenticated && !isAuth) {
-		return redirect('/admin/users');
+		return redirect('/admin/orders');
 	}
 
 	return <>{children}</>;
