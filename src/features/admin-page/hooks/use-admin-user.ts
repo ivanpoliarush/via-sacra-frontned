@@ -4,7 +4,7 @@ import { AdminUserState } from '../types/admin-user.state';
 
 export const useAdminUser = createStore<AdminUserState>((get, set) => ({
 	password: '',
-	loading: false,
+	loading: true,
 	isAuthenticated: false,
 
 	setPassword: password => {
@@ -12,31 +12,46 @@ export const useAdminUser = createStore<AdminUserState>((get, set) => ({
 		localStorage.setItem('admin-password', password);
 	},
 	login: async () => {
-		const { password } = get();
-		if (!password) {
-			return;
+		try {
+			const { password } = get();
+			if (!password) {
+				return false;
+			}
+
+			const { data } = await adminApi.post<{ success: boolean }>(
+				'/auth/login',
+				{
+					password,
+				},
+			);
+
+			if (data && data.success) {
+				set({ isAuthenticated: true });
+				return true;
+			} else {
+				return false;
+			}
+		} catch (error) {
+			console.log('Failed to login', error);
+			return false;
 		}
-
-		set({ loading: true });
-
-		const { data } = await adminApi.post<{ success: boolean }>('/login', {
-			password,
-		});
-
-		if (data && data.success) {
-			set({ isAuthenticated: true });
-		}
-
-		set({ loading: false });
 	},
 	logout: () => {
 		set({ isAuthenticated: false });
 		localStorage.removeItem('admin-password');
 	},
-	init: () => {
+	init: async () => {
 		const password = localStorage.getItem('admin-password');
 		if (password) {
 			set({ password });
 		}
+
+		set({ loading: true });
+
+		const { login } = get();
+
+		await login();
+
+		set({ loading: false });
 	},
 }));

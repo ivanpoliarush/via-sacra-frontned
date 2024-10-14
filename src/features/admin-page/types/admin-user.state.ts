@@ -4,7 +4,7 @@ export interface AdminUserState {
 	isAuthenticated: boolean;
 
 	setPassword: (password: string) => void;
-	login: () => Promise<void>;
+	login: () => Promise<boolean>;
 	logout: () => void;
-	init: () => void;
+	init: () => Promise<void>;
 }
