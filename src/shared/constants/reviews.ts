@@ -30,7 +30,7 @@ export const REVIEWS = (
 		author: {
 			name: translate[3].auhtor.name,
 			age: translate[3].auhtor.age,
-			photo: '/images/home-page/reviews-section/people/ana.png',
+			photo: '/images/home-page/reviews-section/people/sergio.png',
 		},
 	},
 	{
@@ -38,7 +38,7 @@ export const REVIEWS = (
 		author: {
 			name: translate[4].auhtor.name,
 			age: translate[4].auhtor.age,
-			photo: '/images/home-page/reviews-section/people/sergio.png',
+			photo: '/images/home-page/reviews-section/people/ana.png',
 		},
 	},
 ];
