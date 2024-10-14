@@ -1,7 +1,7 @@
 'use client';
 
 import { useAsyncFunction } from '@/features/admin-page/hooks/use-async-function';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TableBody } from '../table-body/table-body';
 import { TableFilters } from '../table-fiters/table-fiters';
 import { TableHeader } from '../table-header/table-header';
@@ -14,14 +14,24 @@ export const Table = ({ filters, columns, getData }: TableProps) => {
 		Record<string, string | undefined>
 	>({});
 
-	const { data, loading, error } = useAsyncFunction(
-		() => getData(filtersState, page),
-		{ initialExecute: true, initialLoading: true },
-	);
+	const {
+		data,
+		loading,
+		error,
+		execute: refetch,
+	} = useAsyncFunction(() => getData(filtersState, page), {
+		initialExecute: true,
+		initialLoading: true,
+	});
+
+	useEffect(() => {
+		refetch();
+	}, [page]);
 
 	return (
 		<div className={styles.wrapper}>
 			<TableFilters
+				onApply={refetch}
 				onChangeFilter={(key, value) =>
 					setFiltersState({
 						...filtersState,
@@ -35,7 +45,13 @@ export const Table = ({ filters, columns, getData }: TableProps) => {
 				columns={columns}
 				pagination={{
 					isFirstPage: page === 1,
-					isLastPage: false,
+					isLastPage:
+						data && data.type === 'success'
+							? Math.ceil(
+									(data.pagination.total || 1) /
+										data.pagination.limit,
+								) === page
+							: false,
 
 					nextPage: () => setPage(page + 1),
 					prevPage: () => setPage(Math.max(1, page - 1)),

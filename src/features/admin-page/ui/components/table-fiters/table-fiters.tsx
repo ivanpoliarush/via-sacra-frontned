@@ -12,6 +12,7 @@ import styles from './table-fiters.module.css';
 import { TableFiltersProps } from './table-fiters.props';
 
 export const TableFilters = ({
+	onApply,
 	filters,
 	filtersState,
 	onChangeFilter,
@@ -34,6 +35,11 @@ export const TableFilters = ({
 		) {
 			setFiltersOpen(false);
 		}
+	};
+
+	const handleAplly = () => {
+		onApply();
+		setFiltersOpen(false);
 	};
 
 	return (
@@ -65,7 +71,7 @@ export const TableFilters = ({
 							<p className={styles.filtersTitle}>Filters</p>
 							<button
 								className={styles.applyButton}
-								onClick={() => setFiltersOpen(false)}>
+								onClick={handleAplly}>
 								<CheckMarkFill
 									className={styles.checkMarkIcon}
 								/>

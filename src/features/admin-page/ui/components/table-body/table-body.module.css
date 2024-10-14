@@ -3,10 +3,9 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1px;
-	min-height: 500px;
-	max-height: 800px;
+	height: 500px;
 	overflow-y: auto;
-	overflow: hidden;
+	overflow-x: hidden;
 	border-bottom-left-radius: 12px;
 	border-bottom-right-radius: 12px;
 }

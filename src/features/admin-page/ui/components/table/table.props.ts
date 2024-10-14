@@ -27,7 +27,8 @@ export type DataResponse =
 			type: 'success';
 			items: any[];
 			pagination: {
-				isLastPage: boolean;
+				total: number;
+				limit: number;
 			};
 	  }
 	| {

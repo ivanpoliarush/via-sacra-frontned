@@ -25,9 +25,8 @@ export const UsersPage = () => {
 			type: 'success',
 			items: response.data,
 			pagination: {
-				isLastPage:
-					response.pagination.page * response.pagination.limit >=
-					response.pagination.total,
+				total: response.pagination.total,
+				limit: response.pagination.limit,
 			},
 		} as const;
 	};
