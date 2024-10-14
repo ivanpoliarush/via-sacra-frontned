@@ -39,7 +39,7 @@ export interface TableProps<T = TableColumn[]> {
 	columns: T;
 	filters?: TableFilter[];
 	getData: (
-		filters: Record<string, string>,
+		filters: Record<string, string | undefined>,
 		page: number,
 	) => Promise<DataResponse>;
 	deleteItems: (items: any[]) => Promise<void>;

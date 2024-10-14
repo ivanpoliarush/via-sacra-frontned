@@ -5,10 +5,13 @@ import { Table } from '../../components/table/table';
 import styles from './users-page.module.css';
 
 export const UsersPage = () => {
-	const getData = async ({ email }: Record<string, string>, page: number) => {
+	const getData = async (
+		{ email }: Record<string, string | undefined>,
+		page: number,
+	) => {
 		const response = await getUsers(
 			page,
-			email.trim().length ? email : undefined,
+			email && email.trim().length ? email : undefined,
 		);
 
 		if (!response) {
@@ -51,7 +54,12 @@ export const UsersPage = () => {
 						label: 'Registered at',
 						key: 'registeredAt',
 						widthPercent: 50,
-						changeRender: value => new Date(value).toLocaleString(),
+						changeRender: value =>
+							Intl.DateTimeFormat('en-US', {
+								year: '2-digit',
+								month: 'short',
+								day: '2-digit',
+							}).format(new Date(value)),
 					},
 				]}
 				filters={[

@@ -5,7 +5,7 @@ import { Checkbox } from '../checkbox/checkbox';
 import styles from './table-header.module.css';
 import { TableHeaderProps } from './table-header.props';
 
-export const TableHeader = ({ columns }: TableHeaderProps) => {
+export const TableHeader = ({ columns, pagination }: TableHeaderProps) => {
 	const [selected, setSelected] = useState(false);
 
 	return (
@@ -21,16 +21,30 @@ export const TableHeader = ({ columns }: TableHeaderProps) => {
 				))}
 			</div>
 			<div className={styles.paginationActitions}>
-				<button className={styles.paginationButton}>
-					<Triangle
-						className={clsx(styles.triangle, styles.leftTriangle)}
-					/>
-				</button>
-				<button className={styles.paginationButton}>
-					<Triangle
-						className={clsx(styles.triangle, styles.rightTriangle)}
-					/>
-				</button>
+				{!pagination.isFirstPage && (
+					<button
+						className={styles.paginationButton}
+						onClick={pagination.prevPage}>
+						<Triangle
+							className={clsx(
+								styles.triangle,
+								styles.leftTriangle,
+							)}
+						/>
+					</button>
+				)}
+				{!pagination.isLastPage && (
+					<button
+						className={styles.paginationButton}
+						onClick={pagination.nextPage}>
+						<Triangle
+							className={clsx(
+								styles.triangle,
+								styles.rightTriangle,
+							)}
+						/>
+					</button>
+				)}
 			</div>
 		</div>
 	);
