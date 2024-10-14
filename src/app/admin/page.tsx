@@ -1,11 +1,14 @@
 import { AdminLoginGuard } from '@/features/admin-page/ui/components/login-guard/login-guard';
 import { LoginPage } from '@/features/admin-page/ui/pages/login-page/login-page';
+import { Suspense } from 'react';
 
 const LoginPageWrapper = () => {
 	return (
-		<AdminLoginGuard isAuth={false}>
-			<LoginPage />
-		</AdminLoginGuard>
+		<Suspense>
+			<AdminLoginGuard isAuth={false}>
+				<LoginPage />
+			</AdminLoginGuard>
+		</Suspense>
 	);
 };
 
