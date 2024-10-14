@@ -1,4 +1,5 @@
 .body {
+	overflow: scroll !important;
 	background: #000 !important;
 	padding: 0 !important;
 }
