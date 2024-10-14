@@ -1,0 +1,39 @@
+.label {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.label > span {
+	transition: all 0.2s;
+	transform-origin: top left;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	pointer-events: none;
+}
+
+.input {
+	height: 32px;
+	width: 180px;
+	padding: 4px 8px;
+	border-radius: 8px;
+	border: 1px solid #3e4553;
+	background: #323741;
+	outline: none;
+
+	color: #fff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.input:focus {
+	border: 1px solid #2867e8;
+}

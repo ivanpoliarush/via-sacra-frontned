@@ -1,0 +1,90 @@
+.wrapper {
+	position: relative;
+}
+
+.title {
+	color: rgba(255, 255, 255, 0.48);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	height: 32px;
+	width: 180px;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 4px 16px 4px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #3e4553;
+}
+
+.header.open {
+	border: 1px solid #2867e8;
+}
+
+.label {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.label.active {
+	color: #fff;
+}
+
+.triangle {
+	transform: rotate(0deg);
+	transition: 0.3s all;
+}
+
+.triangle.open {
+	transform: rotate(180deg);
+}
+
+.options {
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	z-index: 10;
+	padding: 8px 0;
+	background: #323741;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.option {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 12px 16px;
+	transition: 0.3s all;
+}
+
+.option:hover {
+	background: #2c2f36;
+}
+
+.option:active {
+	background: #2f343c;
+}
+
+.optionLabel {
+	color: #ffffff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+}

@@ -1,0 +1,114 @@
+.wrapper {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	border-bottom: 1px solid #3e4553;
+	background: #272a32;
+	padding: 16px;
+	display: flex;
+	gap: 16px;
+	position: relative;
+}
+
+.button {
+	display: flex;
+	padding: 4px 8px;
+	align-items: center;
+	gap: 4px;
+	border-radius: 8px;
+	border: 1px solid #3e4553;
+	background: #323741;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+.button:hover {
+	opacity: 0.9;
+}
+
+.button:active {
+	opacity: 0.7;
+}
+
+.button.disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+.buttonLabel {
+	color: #8694b1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.icon {
+	width: 18px;
+}
+
+.icon path {
+	stroke: #8694b1;
+}
+
+.filters {
+	top: 60px;
+	left: 115px;
+	position: absolute;
+	max-width: 500px;
+	border-radius: 8px;
+	background: #323741;
+}
+
+.filtersHeader {
+	border-bottom: 1px solid #3e4553;
+	padding: 8px 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.filtersTitle {
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+}
+
+.applyButton {
+	border-radius: 24px;
+	background: #3b414a;
+	width: 28px;
+	height: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+.applyButton:hover {
+	opacity: 0.9;
+}
+
+.applyButton:active {
+	opacity: 0.7;
+}
+
+.checkMarkIcon {
+	scale: 1.2;
+}
+
+.filtersBody {
+	padding: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	align-items: center;
+}

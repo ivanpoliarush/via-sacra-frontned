@@ -1,7 +1,10 @@
+'use client';
+
 import { deleteUser, getUsers } from '@/features/admin-page/api/users';
 import { Table } from '../../components/table/table';
+import styles from './users-page.module.css';
 
-export const OrdersPage = () => {
+export const UsersPage = () => {
 	const getData = async ({ email }: Record<string, string>, page: number) => {
 		const response = await getUsers(
 			page,
@@ -36,7 +39,7 @@ export const OrdersPage = () => {
 	};
 
 	return (
-		<main>
+		<main className={styles.wrapper}>
 			<Table
 				columns={[
 					{
@@ -56,6 +59,7 @@ export const OrdersPage = () => {
 						type: 'search',
 						label: 'Email',
 						key: 'email',
+						placeholder: 'Search by email',
 					},
 				]}
 				getData={getData}

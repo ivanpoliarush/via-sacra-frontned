@@ -12,11 +12,13 @@ export type TableFilter =
 			type: 'search';
 			label: string;
 			key: string;
+			placeholder?: string;
 	  }
 	| {
 			type: 'select';
 			label: string;
 			key: string;
+			defaultLabel: string;
 			options: { label: string; value: string }[];
 	  };
 
