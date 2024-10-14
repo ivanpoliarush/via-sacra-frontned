@@ -69,6 +69,7 @@ export const UsersPage = () => {
 						placeholder: 'Search by email',
 					},
 				]}
+				getId={item => item.id}
 				getData={getData}
 				deleteItems={deleteItems}
 			/>

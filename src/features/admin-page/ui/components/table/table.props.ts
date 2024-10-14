@@ -39,6 +39,7 @@ export type DataResponse =
 export interface TableProps<T = TableColumn[]> {
 	columns: T;
 	filters?: TableFilter[];
+	getId: (item: any) => string;
 	getData: (
 		filters: Record<string, string | undefined>,
 		page: number,

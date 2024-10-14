@@ -5,4 +5,7 @@ export interface TableBodyProps {
 	loading: boolean;
 	error: boolean;
 	columns: TableColumn[];
+
+	isSelected: (item: any) => boolean;
+	handleSelect: (item: any) => void;
 }

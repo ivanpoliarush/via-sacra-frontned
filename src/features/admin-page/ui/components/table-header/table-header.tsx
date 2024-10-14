@@ -1,16 +1,18 @@
 import { Triangle } from '@/assets/icons/triangle';
 import clsx from 'clsx';
-import { useState } from 'react';
 import { Checkbox } from '../checkbox/checkbox';
 import styles from './table-header.module.css';
 import { TableHeaderProps } from './table-header.props';
 
-export const TableHeader = ({ columns, pagination }: TableHeaderProps) => {
-	const [selected, setSelected] = useState(false);
-
+export const TableHeader = ({
+	columns,
+	isAllSelected,
+	handleSelectAll,
+	pagination,
+}: TableHeaderProps) => {
 	return (
 		<div className={styles.wrapper}>
-			<Checkbox selected={selected} onChange={setSelected} />
+			<Checkbox selected={isAllSelected} onChange={handleSelectAll} />
 			<div className={styles.columns}>
 				{columns.map(column => (
 					<div

@@ -14,6 +14,8 @@ import { TableFiltersProps } from './table-fiters.props';
 export const TableFilters = ({
 	onApply,
 	filters,
+	handleDelete,
+	selectedRows,
 	filtersState,
 	onChangeFilter,
 }: TableFiltersProps) => {
@@ -45,8 +47,9 @@ export const TableFilters = ({
 	return (
 		<div className={styles.wrapper}>
 			<div
+				onDoubleClick={handleDelete}
 				className={clsx(styles.button, {
-					[styles.disabled]: true,
+					[styles.disabled]: selectedRows.length === 0,
 				})}>
 				<Bin className={styles.icon} />
 				<p className={styles.buttonLabel}>Delete</p>

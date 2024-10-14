@@ -1,14 +1,20 @@
-import { isValidElement, useState } from 'react';
+import { isValidElement } from 'react';
 import { Checkbox } from '../checkbox/checkbox';
 import styles from './table-column.module.css';
 import { TableColumnProps } from './table-column.props';
 
-export const TableColumn = ({ columns, item }: TableColumnProps) => {
-	const [selected, setSelected] = useState(false);
-
+export const TableColumn = ({
+	columns,
+	item,
+	isSelected,
+	handleSelect,
+}: TableColumnProps) => {
 	return (
 		<div className={styles.wrapper}>
-			<Checkbox selected={selected} onChange={setSelected} />
+			<Checkbox
+				selected={isSelected(item)}
+				onChange={() => handleSelect(item)}
+			/>
 			<div className={styles.columns}>
 				{columns.map((column, index) => (
 					<div

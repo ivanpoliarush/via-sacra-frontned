@@ -8,6 +8,8 @@ export const TableBody = ({
 	error,
 	data,
 	columns,
+	handleSelect,
+	isSelected,
 }: TableBodyProps) => {
 	if (loading) {
 		return (
@@ -45,7 +47,13 @@ export const TableBody = ({
 	return (
 		<div className={styles.wrapper}>
 			{data.items.map((item, index) => (
-				<TableColumn item={item} key={index} columns={columns} />
+				<TableColumn
+					handleSelect={handleSelect}
+					isSelected={isSelected}
+					item={item}
+					key={index}
+					columns={columns}
+				/>
 			))}
 		</div>
 	);
