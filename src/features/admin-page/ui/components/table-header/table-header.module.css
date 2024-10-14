@@ -1,0 +1,60 @@
+.wrapper {
+	gap: 16px;
+	display: flex;
+	padding: 12px 16px;
+	align-items: center;
+	background: #323741;
+	border-bottom: 1px solid #3e4553;
+}
+
+.columns {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.column {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.columnLabel {
+	color: #fff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+.paginationActitions {
+	width: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.paginationButton {
+	display: flex;
+	padding: 4px;
+	height: 24px;
+	width: 24px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 24px;
+	background: #3b414a;
+	border: none;
+	cursor: pointer;
+}
+
+.triangle {
+	height: 12px;
+}
+
+.leftTriangle {
+	transform: rotate(90deg);
+}
+
+.rightTriangle {
+	transform: rotate(-90deg);
+}

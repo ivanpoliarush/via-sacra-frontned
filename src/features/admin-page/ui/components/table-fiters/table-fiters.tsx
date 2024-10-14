@@ -1,7 +1,7 @@
 'use client';
 
 import { Bin } from '@/assets/icons/bin';
-import { CheckMark } from '@/assets/icons/check-mark';
+import { CheckMarkFill } from '@/assets/icons/check-mark';
 import { Filters } from '@/assets/icons/filters';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -66,7 +66,9 @@ export const TableFilters = ({
 							<button
 								className={styles.applyButton}
 								onClick={() => setFiltersOpen(false)}>
-								<CheckMark className={styles.checkMarkIcon} />
+								<CheckMarkFill
+									className={styles.checkMarkIcon}
+								/>
 							</button>
 						</div>
 						<div className={styles.filtersBody}>
@@ -76,7 +78,9 @@ export const TableFilters = ({
 										<Input
 											key={filter.key}
 											label={filter.label}
-											value={filtersState[filter.key]}
+											value={
+												filtersState[filter.key] || ''
+											}
 											placeholder={filter.placeholder}
 											onChange={value =>
 												onChangeFilter(
@@ -90,7 +94,9 @@ export const TableFilters = ({
 										<Select
 											key={filter.key}
 											label={filter.label}
-											value={filtersState[filter.key]}
+											value={
+												filtersState[filter.key] || ''
+											}
 											options={filter.options}
 											defaultLabel={filter.defaultLabel}
 											onChange={value =>

@@ -1,0 +1,22 @@
+.wrapper {
+	width: 16px;
+	height: 16px;
+	min-width: 16px;
+	min-height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid #8694b1;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.selected {
+	width: 18px;
+	height: 18px;
+	min-width: 18px;
+	min-height: 18px;
+	background: #2867e8;
+	border-width: 0;
+}

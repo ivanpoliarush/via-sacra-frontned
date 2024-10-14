@@ -1,6 +1,6 @@
 import { IconProps } from '@/shared/types/icon.props';
 
-export const CheckMark = (props: IconProps) => (
+export const CheckMarkFill = (props: IconProps) => (
 	<svg
 		{...props}
 		xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,23 @@ export const CheckMark = (props: IconProps) => (
 			d="M8 12.3333L10.4615 15L16 9"
 			stroke="#323741"
 			stroke-width="0.666667"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		/>
+	</svg>
+);
+
+export const CheckMark = (props: IconProps) => (
+	<svg
+		{...props}
+		xmlns="http://www.w3.org/2000/svg"
+		width="12"
+		height="12"
+		viewBox="0 0 12 12"
+		fill="none">
+		<path
+			d="M2 6.30556L4.46154 8.75L10 3.25"
+			stroke="white"
 			stroke-linecap="round"
 			stroke-linejoin="round"
 		/>
