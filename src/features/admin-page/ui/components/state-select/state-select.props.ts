@@ -1,3 +1,4 @@
 export interface StateSelectProps {
-	state: string;
+	initialState: string;
+	onChange: (state: string) => void;
 }

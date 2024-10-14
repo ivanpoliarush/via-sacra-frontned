@@ -1,4 +1,3 @@
-import { capitalizeFirstLetter } from '@/shared/lib/text';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
@@ -17,9 +16,13 @@ const variants = {
 	},
 };
 
-export const StateSelect = ({ state }: StateSelectProps) => {
+export const StateSelect = ({ initialState, onChange }: StateSelectProps) => {
+	const [state, setState] = useState(initialState);
+
 	const [open, setOpen] = useState(false);
 	const selectRef = useRef<HTMLDivElement>(null);
+
+	const displayState = STATUSES.find(stateItem => stateItem.value === state);
 	const filteredStates = STATUSES.filter(
 		stateItem => stateItem.value !== state,
 	);
@@ -41,14 +44,18 @@ export const StateSelect = ({ state }: StateSelectProps) => {
 		}
 	};
 
+	const handleChange = (state: string) => {
+		setState(state);
+		setOpen(false);
+		onChange(state);
+	};
+
 	return (
 		<div className={styles.wrapper} ref={selectRef}>
 			<div
-				onClick={() => setOpen(true)}
+				onClick={() => setOpen(!open)}
 				className={clsx(styles.item, styles[state])}>
-				<p className={styles.label}>
-					{capitalizeFirstLetter(state).replace('_', ' ')}
-				</p>
+				<p className={styles.label}>{displayState?.label || state}</p>
 			</div>
 			<motion.div
 				variants={variants}
@@ -57,15 +64,10 @@ export const StateSelect = ({ state }: StateSelectProps) => {
 				className={styles.list}>
 				{filteredStates.map(stateItem => (
 					<div
+						onClick={() => handleChange(stateItem.value)}
 						key={stateItem.value}
-						onClick={() => setOpen(true)}
 						className={clsx(styles.item, styles[stateItem.value])}>
-						<p className={styles.label}>
-							{capitalizeFirstLetter(stateItem.value).replace(
-								'_',
-								' ',
-							)}
-						</p>
+						<p className={styles.label}>{stateItem.label}</p>
 					</div>
 				))}
 			</motion.div>

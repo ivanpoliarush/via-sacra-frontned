@@ -4,7 +4,7 @@ export interface TableColumn {
 	label: string;
 	key: string;
 	widthPercent: number;
-	changeRender?: (value: string) => ReactNode | string;
+	changeRender?: (value: string, item: any) => ReactNode | string;
 }
 
 export type TableFilter =

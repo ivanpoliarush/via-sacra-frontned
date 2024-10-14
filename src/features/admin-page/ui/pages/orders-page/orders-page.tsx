@@ -1,6 +1,10 @@
 'use client';
 
-import { deleteOrder, getOrders } from '@/features/admin-page/api/orders';
+import {
+	changeOrderState,
+	deleteOrder,
+	getOrders,
+} from '@/features/admin-page/api/orders';
 import { capitalizeFirstLetter } from '@/shared/lib/text';
 import { StateSelect } from '../../components/state-select/state-select';
 import { Table } from '../../components/table/table';
@@ -91,7 +95,14 @@ export const OrdersPage = () => {
 						label: 'State',
 						key: 'state',
 						widthPercent: 14,
-						changeRender: value => <StateSelect state={value} />,
+						changeRender: (value, item) => (
+							<StateSelect
+								initialState={value}
+								onChange={state =>
+									changeOrderState(item.id, state)
+								}
+							/>
+						),
 					},
 				]}
 				filters={[

@@ -36,6 +36,7 @@
 }
 
 .list {
+	overflow: hidden;
 	position: absolute;
 	top: 30px;
 	left: -10px;

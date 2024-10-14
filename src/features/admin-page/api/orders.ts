@@ -16,6 +16,16 @@ export const getOrders = async (page: number, filters: OrderFilters) => {
 	}
 };
 
+export const changeOrderState = async (id: string, state: string) => {
+	try {
+		await adminApi.put(`/orders/${id}`, { state });
+		return true;
+	} catch (error) {
+		console.log('Failed to change order state', error);
+		return false;
+	}
+};
+
 export const deleteOrder = async (id: string) => {
 	try {
 		await adminApi.delete(`/orders/${id}`);

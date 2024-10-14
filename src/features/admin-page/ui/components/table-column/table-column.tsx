@@ -24,12 +24,15 @@ export const TableColumn = ({
 						{column.changeRender ? (
 							<>
 								{isValidElement(
-									column.changeRender(item[column.key]),
+									column.changeRender(item[column.key], item),
 								) ? (
-									column.changeRender(item[column.key])
+									column.changeRender(item[column.key], item)
 								) : (
 									<p className={styles.columnLabel}>
-										{column.changeRender(item[column.key])}
+										{column.changeRender(
+											item[column.key],
+											item,
+										)}
 									</p>
 								)}
 							</>
